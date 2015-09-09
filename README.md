@@ -7,6 +7,10 @@ Faces (JSF) component suite based on Crystal UI and [Metal.js](http://metaljs.co
 
 [GNU Lesser General Public License (LGPL), Version 2.1](http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt)
 
+## News
+
+For the latest news and updates, follow [@liferayfaces](https://twitter.com/liferayfaces).
+
 ## Building From Source
 
 Using [Maven](https://maven.apache.org/) 3.x:
