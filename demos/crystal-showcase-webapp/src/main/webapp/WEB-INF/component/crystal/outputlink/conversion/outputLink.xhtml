@@ -1,0 +1,24 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-1col-60.xhtml">
+
+	<ui:define name="col1">
+		<crystal:form>
+			<showcase:example>
+				<crystal:outputLabel value="#{i18n['country']}" />
+				<crystal:selectOneMenu id="selectOneMenuId" value="#{outputLinkModelBean.country}">
+					<f:selectItems value="#{countryService.allCountries}" var="country" itemValue="#{country}"
+						itemLabel="#{country.countryName}" />
+					<f:ajax render="selectOneMenuId outputLinkId" />
+					<f:converter converterId="com.liferay.faces.showcase.converter.CountryConverter" />
+				</crystal:selectOneMenu>
+				<br />
+				<crystal:outputLink id="outputLinkId" converter="com.liferay.faces.showcase.converter.CountryGmapConverter"
+					target="_blank" value="#{outputLinkModelBean.country.countryId}">
+					<crystal:outputText value="#{i18n['link-to-a-map-of']} #{outputLinkModelBean.country.countryName}" />
+				</crystal:outputLink>
+			</showcase:example>
+		</crystal:form>
+	</ui:define>
+
+</ui:composition>

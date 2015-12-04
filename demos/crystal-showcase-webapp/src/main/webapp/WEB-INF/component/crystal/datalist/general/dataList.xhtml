@@ -1,0 +1,85 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-3col.xhtml">
+
+	<!-- Example 1: Specifying type="unordered" (the default) -->
+	<ui:define name="col1">
+		<crystal:form>
+			<showcase:example description="#{i18n['crystal-datalist-general-example-1']}" number="1" renderedCheckbox="true">
+				<crystal:dataList rendered="#{showcaseModelBean.selectedComponent.rendered}">
+					<crystal:dataItem>
+						<crystal:outputText value="Liferay lets you reuse the enterprise software and skills you already have in-house." />
+					</crystal:dataItem>
+					<crystal:dataItem>
+						<crystal:outputText
+							value="Liferay is designed for scalability, reliablity, and high performance both on-premise and in the cloud." />
+					</crystal:dataItem>
+					<crystal:dataItem>
+						<crystal:outputText
+							value="Liferay is designed for integrating with both enterprise systems and web-based resources." />
+					</crystal:dataItem>
+					<crystal:dataItem>
+						<crystal:outputText
+							value="With Liferay, projects are completed faster and with smaller budgets so you can see immediate results." />
+					</crystal:dataItem>
+					<crystal:dataItem>
+						<crystal:outputText
+							value="Our open source community fosters innovation, increase security, and improves quality of the software." />
+					</crystal:dataItem>
+				</crystal:dataList>
+			</showcase:example>
+		</crystal:form>
+	</ui:define>
+
+	<!-- Example 2: Specifying type="ordered" -->
+	<ui:define name="col2">
+		<showcase:example description="#{i18n['crystal-datalist-general-example-2']}" number="2">
+			<crystal:dataList type="ordered">
+				<crystal:dataItem>
+					<crystal:outputText value="Liferay lets you reuse the enterprise software and skills you already have in-house." />
+				</crystal:dataItem>
+				<crystal:dataItem>
+					<crystal:outputText
+						value="Liferay is designed for scalability, reliablity, and high performance both on-premise and in the cloud." />
+				</crystal:dataItem>
+				<crystal:dataItem>
+					<crystal:outputText value="Liferay is designed for integrating with both enterprise systems and web-based resources." />
+				</crystal:dataItem>
+				<crystal:dataItem>
+					<crystal:outputText
+						value="With Liferay, projects are completed faster and with smaller budgets so you can see immediate results." />
+				</crystal:dataItem>
+				<crystal:dataItem>
+					<crystal:outputText
+						value="Our open source community fosters innovation, increase security, and improves quality of the software." />
+				</crystal:dataItem>
+			</crystal:dataList>
+		</showcase:example>
+	</ui:define>
+
+	<!-- Example 3: Specifying type="description" -->
+	<ui:define name="col3">
+		<showcase:example description="#{i18n['crystal-datalist-general-example-3']}" number="3">
+			<crystal:dataList type="description">
+				<crystal:dataItem>
+					<crystal:outputText value="Liferay lets you reuse the enterprise software and skills you already have in-house." />
+				</crystal:dataItem>
+				<crystal:dataItem>
+					<crystal:outputText
+						value="Liferay is designed for scalability, reliablity, and high performance both on-premise and in the cloud." />
+				</crystal:dataItem>
+				<crystal:dataItem>
+					<crystal:outputText value="Liferay is designed for integrating with both enterprise systems and web-based resources." />
+				</crystal:dataItem>
+				<crystal:dataItem>
+					<crystal:outputText
+						value="With Liferay, projects are completed faster and with smaller budgets so you can see immediate results." />
+				</crystal:dataItem>
+				<crystal:dataItem>
+					<crystal:outputText
+						value="Our open source community fosters innovation, increase security, and improves quality of the software." />
+				</crystal:dataItem>
+			</crystal:dataList>
+		</showcase:example>
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,29 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-1col-60.xhtml">
+
+	<ui:define name="col1">
+		<crystal:form>
+			<showcase:example renderedCheckbox="true">
+				<crystal:messages globalOnly="true" layout="table" />
+				<!-- Note: Please consider using crystal:field instead of crystal:panelGroup and crystal:outputLabel -->
+				<crystal:panelGroup id="container" layout="block" styleClass="form-inline">
+					<crystal:outputLabel for="firstName" rendered="#{showcaseModelBean.selectedComponent.rendered}"
+						value="#{i18n['first-name']}" />
+					<crystal:inputText id="firstName" required="true" value="#{fieldModelBean.firstName}">
+						<f:ajax render="container modelValue" />
+					</crystal:inputText>
+					<crystal:icon name="asterisk" />
+					<crystal:message for="firstName" />
+				</crystal:panelGroup>
+				<hr />
+				<crystal:commandButton action="#{fieldBackingBean.submit}" render="@form"
+					value="#{i18n['submit-and-re-render-form']}" />
+			</showcase:example>
+			<showcase:results label="#{i18n['model-value']}">
+				<crystal:outputText id="modelValue" value="#{fieldModelBean.firstName}" />
+			</showcase:results>
+		</crystal:form>
+	</ui:define>
+
+</ui:composition>

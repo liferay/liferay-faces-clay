@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase">
+	<c:set value="#{showcaseModelBean.selectedComponent}" var="selectedComponent" />
+	<c:set value="#{selectedComponent.key}" var="selectedComponentKey" />
+	<c:set value="#{selectedComponent.useCaseName}" var="selectedComponentUseCaseName" />
+	<crystal:outputStylesheet name="showcase.css" library="css" />
+	<crystal:row>
+		<crystal:column styleClass="showcase-nav-col" width="#{browserSniffer.ipad ? '30' : '25'}">
+			<crystal:link outcome="home">
+				<crystal:image library="images" name="logo-nav.png" styleClass="logo" />
+			</crystal:link>
+			<showcase:accordion selectedIndex="#{selectedComponent.categoryIndex}" value="#{listModelBean.showcaseCategories}"
+				var="showcaseCategory">
+				<showcase:tab>
+					<f:facet name="header">
+						<crystal:image library="images" name="icon-#{showcaseCategory}.png" />
+						<crystal:outputText styleClass="category-name" value="#{i18n[showcaseCategory]}" />
+					</f:facet>
+					<crystal:dataList styleClass="nav"
+						value="#{listModelBean.showcaseCategoryMap[showcaseCategory]}" var="showcaseComponent">
+						<crystal:dataItem styleClass="#{(selectedComponentKey == showcaseComponent.key) ? 'active' : ''}">
+							<crystal:link styleClass="showcase-link" outcome="component" value="#{showcaseComponent}">
+								<f:param name="componentPrefix" value="#{showcaseComponent.prefix}" />
+								<f:param name="componentName" value="#{showcaseComponent.lowerCaseName}" />
+								<f:param name="componentUseCase" value="general" />
+								<crystal:icon name="chevron-right" />
+							</crystal:link>
+							<ui:fragment rendered="#{selectedComponentKey == showcaseComponent.key}">
+								<crystal:dataList styleClass="nav" value="#{selectedComponent.useCases}"
+									var="useCase">
+										<crystal:dataItem styleClass="#{(selectedComponentUseCaseName == useCase.name) ? 'active' : ''}"
+											style="white-space: nowrap;">
+											<crystal:link styleClass="showcase-link" value="#{i18n[useCase.name]}">
+												<f:param name="componentPrefix" value="#{selectedComponent.prefix}" />
+												<f:param name="componentName" value="#{selectedComponent.lowerCaseName}" />
+												<f:param name="componentUseCase" value="#{useCase.name}" />
+												<crystal:icon name="chevron-right" />
+											</crystal:link>
+										</crystal:dataItem>
+								</crystal:dataList>
+							</ui:fragment>
+						</crystal:dataItem>
+					</crystal:dataList>
+				</showcase:tab>
+			</showcase:accordion>
+		</crystal:column>
+		<crystal:column width="#{browserSniffer.ipad ? '70' : '75'}">
+			<showcase:container>
+				<ui:insert name="content" />
+			</showcase:container>
+			<showcase:container styleClass="showcase-info">
+				<crystal:outputText escape="false" value="#{listModelBean.dependencyInfo}" />
+			</showcase:container>
+		</crystal:column>
+	</crystal:row>
+</ui:composition>

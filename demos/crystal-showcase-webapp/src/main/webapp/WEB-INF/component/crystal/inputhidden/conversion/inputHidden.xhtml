@@ -1,0 +1,63 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-2col.xhtml">
+
+	<ui:define name="col1">
+		<!-- Example 1: Conversion to a Date using the converter attribute. -->
+		<crystal:form>
+			<showcase:example description="#{i18n['conversion-to-a-date-using-converter-attribute']}" number="1">
+				<showcase:container>
+					<crystal:outputText value="#{i18n['this-is-a-div-that-contains-a-hidden-input']}" />
+					<crystal:field>
+						<crystal:inputHidden id="hidden1" binding="#{inputHidden1}" converter="javax.faces.DateTime"
+							converterMessage="#{i18n['converter-message']}" value="#{inputHiddenModelBean.date}" />
+						<crystal:message for="hidden1" />
+					</crystal:field>
+				</showcase:container>
+				<crystal:button onclick="document.getElementById('#{inputHidden1.clientId}').value='#{inputHiddenModelBean.testDate1}';"
+					value="#{i18n['copy-a-date-to-the-value-of-the-hidden-input']}" />
+				<crystal:button onclick="document.getElementById('#{inputHidden1.clientId}').value='';"
+					value="#{i18n['clear-the-value-of-the-hidden-input']}" />
+				<hr />
+				<crystal:commandButton action="#{inputHiddenBackingBean.submit}" render="@form"
+					value="#{i18n['submit']}" />
+			</showcase:example>
+			<showcase:results label="#{i18n['model-value']}">
+				<crystal:outputText id="modelValue" converter="javax.faces.DateTime"
+					value="#{inputHiddenModelBean.date}" />
+			</showcase:results>
+		</crystal:form>
+	</ui:define>
+
+	<ui:define name="col2">
+		<!-- Example 2: Conversion to a Date using an f:convertDateTime child tag. -->
+		<crystal:form>
+			<showcase:example description="#{i18n['conversion-to-a-date-using-f-convertdatetime']}" number="2">
+				<showcase:container>
+					<crystal:outputText value="#{i18n['this-is-a-div-that-contains-a-hidden-input']}" />
+					<crystal:field>
+						<crystal:inputHidden id="hidden2" binding="#{inputHidden2}"
+							converterMessage="#{i18n['converter-message']}"
+							value="#{inputHiddenModelBean.date}">
+							<f:convertDateTime pattern="MM/dd/yyyy" />
+						</crystal:inputHidden>
+						<crystal:message for="hidden2" />
+					</crystal:field>
+				</showcase:container>
+				<crystal:button onclick="document.getElementById('#{inputHidden2.clientId}').value='#{inputHiddenModelBean.testDate2}';"
+					value="#{i18n['copy-a-date-to-the-value-of-the-hidden-input']}" />
+				<crystal:button onclick="document.getElementById('#{inputHidden2.clientId}').value='';"
+					value="#{i18n['clear-the-value-of-the-hidden-input']}" />
+				<hr />
+				<crystal:commandButton action="#{inputHiddenBackingBean.submit}" render="@form"
+					value="#{i18n['submit']}" />
+			</showcase:example>
+			<showcase:results label="#{i18n['model-value']}">
+				<crystal:outputText id="modelValue" value="#{inputHiddenModelBean.date}">
+					<f:convertDateTime pattern="MM/dd/yyyy" />
+				</crystal:outputText>
+			</showcase:results>
+		</crystal:form>
+	</ui:define>
+
+</ui:composition>

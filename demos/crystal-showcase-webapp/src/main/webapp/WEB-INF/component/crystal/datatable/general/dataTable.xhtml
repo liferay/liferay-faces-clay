@@ -1,0 +1,35 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-1col-80.xhtml">
+
+	<ui:define name="col1">
+		<crystal:form>
+			<showcase:example renderedCheckbox="true">
+				<crystal:dataTable rendered="#{showcaseModelBean.selectedComponent.rendered}" rows="10"
+					value="#{dataTableBacking.customerDataModel}" var="customer">
+					<f:facet name="header">
+						<crystal:outputText value="#{i18n['customers']}" />
+					</f:facet>
+					<crystal:column headerText="#{i18n['first-name']}">
+						<crystal:outputText value="#{customer.firstName}" />
+					</crystal:column>
+					<crystal:column headerText="#{i18n['last-name']}">
+						<crystal:outputText value="#{customer.lastName}" />
+					</crystal:column>
+					<crystal:column headerText="#{i18n['date-of-birth']}">
+						<crystal:outputText value="#{customer.dateOfBirth}">
+							<f:convertDateTime pattern="MMM dd, yyyy" />
+						</crystal:outputText>
+					</crystal:column>
+					<crystal:column headerText="#{i18n['country']}">
+						<crystal:outputText value="#{customer.country.countryName}"/>
+					</crystal:column>
+					<f:facet name="footer">
+						<crystal:outputText value="#{i18n['footer']}" />
+					</f:facet>
+				</crystal:dataTable>
+			</showcase:example>
+		</crystal:form>
+	</ui:define>
+
+</ui:composition>

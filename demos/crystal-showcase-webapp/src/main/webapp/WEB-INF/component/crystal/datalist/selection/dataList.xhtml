@@ -1,0 +1,24 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-1col-60.xhtml">
+
+	<ui:define name="col1">
+		<showcase:example>
+			<crystal:form id="exampleForm">
+				<crystal:messages id="feedback" layout="table" globalOnly="true" />
+				<crystal:dataList styleClass="unstyled" value="#{dataListModelBean.liferayBenefits}" var="liferayBenefit">
+					<crystal:dataItem>
+						<crystal:icon name="search" />
+						<crystal:commandLink
+							render=":exampleForm:dialogContents" value="#{liferayBenefit.label}">
+							<f:setPropertyActionListener value="#{liferayBenefit}"
+								target="#{dataListModelBean.selectedLiferayBenefit}" />
+							<f:ajax render=":exampleForm:feedback" />
+						</crystal:commandLink>
+					</crystal:dataItem>
+				</crystal:dataList>
+			</crystal:form>
+		</showcase:example>
+	</ui:define>
+
+</ui:composition>

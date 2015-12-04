@@ -1,0 +1,20 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase">
+
+	<crystal:form>
+		<showcase:example renderedCheckbox="true">
+			<crystal:row rendered="#{showcaseModelBean.selectedComponent.rendered}">
+				<crystal:column styleClass="bg-primary" width="33">
+					<crystal:outputText value="#{i18n['this-is-column-1']}" />
+				</crystal:column>
+				<crystal:column styleClass="bg-success" width="33">
+					<crystal:outputText value="#{i18n['this-is-column-2']}" />
+				</crystal:column>
+				<crystal:column styleClass="bg-primary" width="33">
+					<crystal:outputText value="#{i18n['this-is-column-3']}" />
+				</crystal:column>
+			</crystal:row>
+		</showcase:example>
+	</crystal:form>
+
+</ui:composition>

@@ -1,0 +1,19 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-1col-60.xhtml">
+
+	<ui:define name="col1">
+		<crystal:form>
+			<showcase:example>
+				<crystal:selectBooleanCheckbox value="#{selectBooleanCheckboxModelBean.agree}">
+					<f:ajax render="@form" />
+				</crystal:selectBooleanCheckbox>
+				<crystal:outputText value="#{i18n['i-agree-to-the-terms-of-the-license-agreement']}" />
+			</showcase:example>
+			<showcase:results label="#{i18n['model-value']}">
+				<crystal:outputText value="#{selectBooleanCheckboxModelBean.agree}" />
+			</showcase:results>
+		</crystal:form>
+	</ui:define>
+
+</ui:composition>

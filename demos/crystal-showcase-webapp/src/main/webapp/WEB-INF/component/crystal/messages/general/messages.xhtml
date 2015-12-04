@@ -1,0 +1,50 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase"
+	template="/WEB-INF/templates/component-4col.xhtml">
+
+	<ui:define name="col1">
+		<!-- Example 1: Render all messages in a <ul> (the default) -->
+		<crystal:form>
+			<showcase:example description="#{i18n['crystal-messages-general-example-1']}" number="1">
+				<crystal:messages />
+				<crystal:outputLabel for="inputText" value="#{i18n['text-field']}" />
+				<crystal:inputText id="inputText" label="#{i18n['text-field']}" required="true"
+					valueChangeListener="#{messageBackingBean.valueChangeListener}" />
+				<br />
+				<crystal:commandButton action="#{messageBackingBean.submit}" render="@form"
+					value="#{i18n['submit-and-re-render-form']}" />
+			</showcase:example>
+		</crystal:form>
+	</ui:define>
+
+	<ui:define name="col2">
+		<!-- Example 2: Render all messages in a <table> -->
+		<crystal:form>
+			<showcase:example description="#{i18n['crystal-messages-general-example-2']}" number="2">
+				<crystal:messages layout="table" />
+				<crystal:outputLabel for="inputText" value="#{i18n['text-field']}" />
+				<crystal:inputText id="inputText" label="#{i18n['text-field']}" required="true"
+					valueChangeListener="#{messageBackingBean.valueChangeListener}" />
+				<br />
+				<crystal:commandButton action="#{messageBackingBean.submit}" render="@form"
+					value="#{i18n['submit-and-re-render-form']}" />
+			</showcase:example>
+		</crystal:form>
+	</ui:define>
+
+	<ui:define name="col3">
+		<!-- Example 3: Render only global messages in a <ul> -->
+		<crystal:form>
+			<showcase:example description="#{i18n['crystal-messages-general-example-3']}" number="3">
+				<crystal:messages globalOnly="true" layout="table" />
+				<crystal:outputLabel for="inputText" value="#{i18n['text-field']}" />
+				<crystal:inputText id="inputText" label="#{i18n['text-field']}" required="true"
+					valueChangeListener="#{messageBackingBean.valueChangeListener}" />
+				<br />
+				<crystal:commandButton action="#{messageBackingBean.submit}" render="@form"
+					value="#{i18n['submit-and-re-render-form']}" />
+			</showcase:example>
+		</crystal:form>
+	</ui:define>
+
+</ui:composition>
