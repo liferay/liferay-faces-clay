@@ -1,0 +1,21 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase"
+	template="/WEB-INF/templates/component-1col-80.xhtml">
+
+	<ui:define name="col1">
+		<metal:outputScript target="body">
+			document.getElementById('#{attributeValue.clientId}').innerHTML =
+				'action=' + document.getElementById('#{myForm.clientId}').action;
+		</metal:outputScript>
+		<metal:form binding="#{myForm}" includeViewParams="true">
+			<metal:messages globalOnly="true" />
+			<showcase:example>
+				<metal:outputText escape="false" value="#{i18n['form-action-attribute-view-params-description']}" />
+			</showcase:example>
+			<showcase:results label="#{i18n['attribute-value']}">
+				<metal:outputText id="attributeValue" binding="#{attributeValue}" />
+			</showcase:results>
+		</metal:form>
+	</ui:define>
+
+</ui:composition>

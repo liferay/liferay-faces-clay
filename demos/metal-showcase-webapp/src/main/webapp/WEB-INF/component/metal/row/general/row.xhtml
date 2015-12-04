@@ -1,0 +1,20 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase">
+
+	<metal:form>
+		<showcase:example renderedCheckbox="true">
+			<metal:row rendered="#{showcaseModelBean.selectedComponent.rendered}">
+				<metal:column styleClass="bg-primary" width="33">
+					<metal:outputText value="#{i18n['this-is-column-1']}" />
+				</metal:column>
+				<metal:column styleClass="bg-success" width="33">
+					<metal:outputText value="#{i18n['this-is-column-2']}" />
+				</metal:column>
+				<metal:column styleClass="bg-primary" width="33">
+					<metal:outputText value="#{i18n['this-is-column-3']}" />
+				</metal:column>
+			</metal:row>
+		</showcase:example>
+	</metal:form>
+
+</ui:composition>

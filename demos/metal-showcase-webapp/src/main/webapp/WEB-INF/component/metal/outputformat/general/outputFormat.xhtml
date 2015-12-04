@@ -1,0 +1,16 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-1col-60.xhtml">
+
+	<ui:define name="col1">
+		<metal:form>
+			<showcase:example renderedCheckbox="true">
+				<metal:outputFormat rendered="#{showcaseModelBean.selectedComponent.rendered}" value="First: {1}, Last: {0}">
+					<f:param value="Omega" />
+					<f:param value="Alpha" />
+				</metal:outputFormat>
+			</showcase:example>
+		</metal:form>
+	</ui:define>
+
+</ui:composition>

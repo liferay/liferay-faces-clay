@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.liferay.faces.metal.demos</groupId>
+		<artifactId>liferay-faces-metal-demos</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+	</parent>
+	<artifactId>metal-showcase-webapp</artifactId>
+	<packaging>war</packaging>
+	<name>Metal Showcase Webapp</name>
+	<description>This plugin is the Liferay Faces Metal Showcase demo webapp.</description>
+
+	<profiles>
+		<profile>
+			<id>prettyfaces</id>
+			<dependencies>
+				<dependency>
+					<groupId>com.ocpsoft</groupId>
+					<artifactId>prettyfaces-jsf2</artifactId>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-install-plugin</artifactId>
+				<configuration>
+					<skip>false</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<dependentWarExcludes>**/h-tags*,**/component/h/**/*,**/images/jsf*.png</dependentWarExcludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.appfuse.plugins</groupId>
+				<artifactId>maven-warpath-plugin</artifactId>
+				<extensions>true</extensions>
+				<executions>
+					<execution>
+						<goals>
+							<goal>add-classes</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.java</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.liferay.faces.metal</groupId>
+			<artifactId>liferay-faces-metal</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.faces.metal</groupId>
+			<artifactId>liferay-faces-metal-reslib</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.faces.showcase</groupId>
+			<artifactId>showcase-common</artifactId>
+			<version>${liferay.faces.showcase.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.faces.showcase</groupId>
+			<artifactId>jsf-showcase-webapp</artifactId>
+			<version>${liferay.faces.showcase.version}</version>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.faces.showcase</groupId>
+			<artifactId>jsf-showcase-webapp</artifactId>
+			<version>${liferay.faces.showcase.version}</version>
+			<type>warpath</type>
+		</dependency>
+	</dependencies>
+
+</project>

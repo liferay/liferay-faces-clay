@@ -1,0 +1,48 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-4col.xhtml">
+
+	<ui:define name="col1">
+		<!-- Example 1: Context-relative path to a resource via the value attribute -->
+		<metal:form>
+			<showcase:example description="#{i18n['metal-image-general-example-1']}" number="1" renderedCheckbox="true">
+				<metal:image rendered="#{showcaseModelBean.selectedComponent.rendered}"
+					value="#{resource['images:liferay-faces-logo.png']}" />
+			</showcase:example>
+		</metal:form>
+	</ui:define>
+
+	<ui:define name="col2">
+		<!-- Example 2: JSF resource via the #{resource} EL keyword -->
+		<metal:form>
+			<showcase:example description="#{i18n['metal-image-general-example-2']}" number="2">
+				<metal:image value="#{resource['images:liferay-faces-logo.png']}" />
+			</showcase:example>
+		</metal:form>
+	</ui:define>
+
+	<ui:define name="col3">
+		<!-- Example 3: JSF resource via the library and name attributes -->
+		<metal:form>
+			<showcase:example description="#{i18n['metal-image-general-example-3']}" number="3">
+				<metal:image library="images" name="liferay-faces-logo.png" />
+			</showcase:example>
+		</metal:form>
+	</ui:define>
+
+	<ui:define name="col4">
+		<!-- Example 4: Clickable areas via the usemap attribute -->
+		<metal:form>
+			<showcase:example description="#{i18n['metal-image-general-example-4']}" number="4">
+				<metal:image usemap="#logoMapName" value="#{resource['images:liferay-faces-logo.png']}" />
+				<map name="logoMapName">
+					<area alt="JSR 362" coords="1,1,60,136" href="https://jcp.org/en/jsr/detail?id=362" shape="rect" target="_blank"
+						title="JSR 362" />
+					<area alt="JSR 378" coords="60,1,120,136" href="https://www.jcp.org/en/jsr/detail?id=378" shape="rect"
+						target="_blank" title="JSR 378" />
+				</map>
+			</showcase:example>
+		</metal:form>
+	</ui:define>
+
+</ui:composition>

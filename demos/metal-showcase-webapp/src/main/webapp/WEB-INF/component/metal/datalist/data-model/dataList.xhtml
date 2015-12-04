@@ -1,0 +1,21 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-1col-60.xhtml">
+
+	<ui:define name="col1">
+		<showcase:example>
+			<metal:form>
+				<metal:dataList value="#{dataListModelBean.liferayBenefits}" var="liferayBenefit" type="description">
+					<metal:dataItem>
+						<metal:image name="icon-#{liferayBenefit.imageName}" library="images" />
+						<metal:outputText value="#{liferayBenefit.label}" />
+					</metal:dataItem>
+					<f:facet name="description">
+						<metal:outputText value="#{liferayBenefit.description}" />
+					</f:facet>
+				</metal:dataList>
+			</metal:form>
+		</showcase:example>
+	</ui:define>
+
+</ui:composition>

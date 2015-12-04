@@ -1,0 +1,24 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-1col-60.xhtml">
+
+	<ui:define name="col1">
+		<showcase:example>
+			<metal:form id="exampleForm">
+				<metal:messages id="feedback" layout="table" globalOnly="true" />
+				<metal:dataList styleClass="unstyled" value="#{dataListModelBean.liferayBenefits}" var="liferayBenefit">
+					<metal:dataItem>
+						<metal:icon name="search" />
+						<metal:commandLink
+							render=":exampleForm:dialogContents" value="#{liferayBenefit.label}">
+							<f:setPropertyActionListener value="#{liferayBenefit}"
+								target="#{dataListModelBean.selectedLiferayBenefit}" />
+							<f:ajax render=":exampleForm:feedback" />
+						</metal:commandLink>
+					</metal:dataItem>
+				</metal:dataList>
+			</metal:form>
+		</showcase:example>
+	</ui:define>
+
+</ui:composition>

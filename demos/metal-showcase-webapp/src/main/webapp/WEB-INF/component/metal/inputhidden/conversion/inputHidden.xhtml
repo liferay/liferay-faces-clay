@@ -1,0 +1,63 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-2col.xhtml">
+
+	<ui:define name="col1">
+		<!-- Example 1: Conversion to a Date using the converter attribute. -->
+		<metal:form>
+			<showcase:example description="#{i18n['conversion-to-a-date-using-converter-attribute']}" number="1">
+				<showcase:container>
+					<metal:outputText value="#{i18n['this-is-a-div-that-contains-a-hidden-input']}" />
+					<metal:field>
+						<metal:inputHidden id="hidden1" binding="#{inputHidden1}" converter="javax.faces.DateTime"
+							converterMessage="#{i18n['converter-message']}" value="#{inputHiddenModelBean.date}" />
+						<metal:message for="hidden1" />
+					</metal:field>
+				</showcase:container>
+				<metal:button onclick="document.getElementById('#{inputHidden1.clientId}').value='#{inputHiddenModelBean.testDate1}';"
+					value="#{i18n['copy-a-date-to-the-value-of-the-hidden-input']}" />
+				<metal:button onclick="document.getElementById('#{inputHidden1.clientId}').value='';"
+					value="#{i18n['clear-the-value-of-the-hidden-input']}" />
+				<hr />
+				<metal:commandButton action="#{inputHiddenBackingBean.submit}" render="@form"
+					value="#{i18n['submit']}" />
+			</showcase:example>
+			<showcase:results label="#{i18n['model-value']}">
+				<metal:outputText id="modelValue" converter="javax.faces.DateTime"
+					value="#{inputHiddenModelBean.date}" />
+			</showcase:results>
+		</metal:form>
+	</ui:define>
+
+	<ui:define name="col2">
+		<!-- Example 2: Conversion to a Date using an f:convertDateTime child tag. -->
+		<metal:form>
+			<showcase:example description="#{i18n['conversion-to-a-date-using-f-convertdatetime']}" number="2">
+				<showcase:container>
+					<metal:outputText value="#{i18n['this-is-a-div-that-contains-a-hidden-input']}" />
+					<metal:field>
+						<metal:inputHidden id="hidden2" binding="#{inputHidden2}"
+							converterMessage="#{i18n['converter-message']}"
+							value="#{inputHiddenModelBean.date}">
+							<f:convertDateTime pattern="MM/dd/yyyy" />
+						</metal:inputHidden>
+						<metal:message for="hidden2" />
+					</metal:field>
+				</showcase:container>
+				<metal:button onclick="document.getElementById('#{inputHidden2.clientId}').value='#{inputHiddenModelBean.testDate2}';"
+					value="#{i18n['copy-a-date-to-the-value-of-the-hidden-input']}" />
+				<metal:button onclick="document.getElementById('#{inputHidden2.clientId}').value='';"
+					value="#{i18n['clear-the-value-of-the-hidden-input']}" />
+				<hr />
+				<metal:commandButton action="#{inputHiddenBackingBean.submit}" render="@form"
+					value="#{i18n['submit']}" />
+			</showcase:example>
+			<showcase:results label="#{i18n['model-value']}">
+				<metal:outputText id="modelValue" value="#{inputHiddenModelBean.date}">
+					<f:convertDateTime pattern="MM/dd/yyyy" />
+				</metal:outputText>
+			</showcase:results>
+		</metal:form>
+	</ui:define>
+
+</ui:composition>

@@ -1,0 +1,28 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-2col.xhtml">
+
+	<ui:define name="col1">
+		<!-- Example 1: Specifying hyperlink text via the value attribute -->
+		<metal:form>
+			<showcase:example description="#{i18n['metal-link-general-example-1']}" number="1" renderedCheckbox="true">
+				<metal:link includeViewParams="true" rendered="#{showcaseModelBean.selectedComponent.rendered}"
+					value="#{i18n['text-for-a-link']}" />
+			</showcase:example>
+		</metal:form>
+	</ui:define>
+
+	<ui:define name="col2">
+		<!-- Example 2: Specifying children as hyperlink text/content -->
+		<metal:form>
+			<showcase:example description="#{i18n['metal-link-general-example-2']}" number="2">
+				<metal:link includeViewParams="true" type="image/png">
+					<metal:icon name="star" />
+					<metal:outputText value=" #{i18n['text-for-a-link']} " />
+					<metal:image value="#{resource['images:liferay-faces-logo-small.png']}" />
+				</metal:link>
+			</showcase:example>
+		</metal:form>
+	</ui:define>
+
+</ui:composition>

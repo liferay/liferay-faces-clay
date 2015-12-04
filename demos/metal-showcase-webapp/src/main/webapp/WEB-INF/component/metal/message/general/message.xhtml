@@ -1,0 +1,18 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase"
+	template="/WEB-INF/templates/component-1col-60.xhtml">
+
+	<ui:define name="col1">
+		<metal:form>
+			<showcase:example description="#{i18n['metal-message-general-example-1']}">
+				<metal:field id="field" label="#{i18n['text-field']}">
+					<metal:inputText id="inputText" required="true"
+						valueChangeListener="#{messageBackingBean.valueChangeListener}" />
+					<metal:message for="inputText" />
+				</metal:field>
+				<metal:commandButton render="field" value="#{i18n['submit-and-re-render-field']}" />
+			</showcase:example>
+		</metal:form>
+	</ui:define>
+
+</ui:composition>

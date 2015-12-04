@@ -1,0 +1,23 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase">
+
+	<showcase:note>
+		<h2>#{i18n['note']}</h2>
+		<metal:dataList>
+			<metal:dataItem>
+				<metal:link includeViewParams="true" value="metal:link" />
+				<metal:outputText escape="false" value=" #{i18n['metal-link-benefits-description']}" />
+			</metal:dataItem>
+			<metal:dataItem>
+				<metal:link includeViewParams="true" value="metal:outputLink">
+					<f:param name="componentPrefix" value="metal" />
+					<f:param name="componentName" value="outputLink" />
+					<f:param name="componentUseCase" value="general" />
+				</metal:link>
+				<metal:outputText escape="false" value=" #{i18n['metal-outputlink-benefits-description']}" />
+			</metal:dataItem>
+		</metal:dataList>
+	</showcase:note>
+
+</ui:composition>

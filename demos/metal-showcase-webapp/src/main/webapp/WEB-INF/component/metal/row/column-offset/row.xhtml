@@ -1,0 +1,41 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase">
+
+	<metal:form>
+		<showcase:example>
+			<metal:row>
+				<metal:column offsetWidth="25" styleClass="bg-primary" width="75">
+					<metal:outputText value="offsetWidth=&quot;25&quot; width=&quot;75&quot;" />
+				</metal:column>
+			</metal:row>
+			<metal:row>
+				<metal:column styleClass="bg-success" width="33">
+					<metal:outputText value="width=&quot;33&quot;" />
+				</metal:column>
+				<metal:column offsetWidth="33" styleClass="bg-success" width="33">
+					<metal:outputText value="offsetWidth=&quot;33&quot; width=&quot;33&quot;" />
+				</metal:column>
+			</metal:row>
+			<metal:row>
+				<metal:column offsetWidth="25" styleClass="bg-primary" width="25">
+					<metal:outputText value="offsetWidth=&quot;25&quot; width=&quot;25&quot;" />
+				</metal:column>
+				<metal:column offsetWidth="25" styleClass="bg-primary" width="25">
+					<metal:outputText value="offsetWidth=&quot;25&quot; width=&quot;25&quot;" />
+				</metal:column>
+			</metal:row>
+			<metal:row>
+				<metal:column offsetWidth="8" styleClass="bg-success" width="17">
+					<metal:outputText value="offsetW=&quot;8&quot; w=&quot;17&quot;" />
+				</metal:column>
+				<metal:column offsetWidth="8" styleClass="bg-success" width="33">
+					<metal:outputText value="offsetWidth=&quot;8&quot; width=&quot;33&quot;" />
+				</metal:column>
+				<metal:column offsetWidth="8" styleClass="bg-success" width="17">
+					<metal:outputText value="offsetW=&quot;8&quot; w=&quot;17&quot;" />
+				</metal:column>
+			</metal:row>
+		</showcase:example>
+	</metal:form>
+
+</ui:composition>

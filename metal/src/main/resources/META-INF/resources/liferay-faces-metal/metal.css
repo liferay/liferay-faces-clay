@@ -1,0 +1,144 @@
+/* metal-button-row */
+div.metal-button-row {
+	overflow: visible;
+}
+
+div.metal-button-row:after {
+	clear: both;
+	content: " ";
+	display: block;
+	overflow: hidden;
+}
+
+div.metal-button-row button.metal-button, div.metal-button-row button.metal-command-button {
+	margin-right: 4px;
+}
+
+/* metal-input-file */
+.metal-input-file .select-files-box,.metal-input-file .upload-files-box {
+	display: inline-block;
+}
+
+.metal-input-file-button-hidden {
+	display: none;
+}
+
+/* metal-messages */
+.metal-messages {
+	border: 1px solid #ddd;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+table.metal-messages {
+	border-collapse: separate;
+	border-spacing: 4px;
+	width: 100%;
+}
+
+ul.metal-messages {
+	list-style-position: inside;
+	margin: 0px;
+	padding: 4px;
+}
+
+/* metal-panel: bootstrap 3 backport */
+div.metal-panel {
+	margin-bottom: 20px;
+	background-color: #fff;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+div.metal-panel div.metal-panel-body {
+	padding: 15px;
+}
+
+div.metal-panel div.metal-panel-heading {
+	padding: 10px 15px;
+	border-bottom: 1px solid transparent;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+div.metal-panel div.metal-panel-heading>.dropdown .dropdown-toggle {
+	color: inherit;
+}
+
+div.metal-panel .metal-panel-title {
+	color: inherit;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+div.metal-panel .metal-panel-title>a {
+	color: inherit;
+}
+
+div.metal-panel div.metal-panel-footer {
+	padding: 10px 15px;
+	background-color: #f5f5f5;
+	border-top: 1px solid #ddd;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+div.metal-panel-default {
+	border-color: #ddd;
+}
+
+div.metal-panel-default>div.metal-panel-heading {
+	color: #333;
+	background-color: #f5f5f5;
+	border-color: #ddd;
+}
+
+div.metal-panel-default>div.metal-panel-heading+.metal-panel-collapse>div.metal-panel-body {
+	border-top-color: #ddd;
+}
+
+div.metal-panel-default>div.metal-panel-heading .metal-panel-badge {
+	color: #f5f5f5;
+	background-color: #333;
+}
+
+div.metal-panel-default>div.panel-footer+div.panel-collapse>div.panel-body {
+	border-bottom-color: #ddd;
+}
+
+/* metal-select-boolean-checkbox */
+.metal-select-boolean-checkbox {
+	vertical-align: baseline;
+}
+
+/* metal-select-one-radio */
+table.metal-select-one-radio {
+	border-collapse: separate;
+}
+
+/* metal-select-many-checkbox */
+table.metal-select-many-checkbox td,table.metal-select-one-radio td {
+	padding-right: 30px;
+}
+
+table.metal-select-many-checkbox td input[type='checkbox'] {
+	vertical-align: baseline;
+}
+
+table.metal-select-many-checkbox td label {
+	display: inline;
+}
+
+table.metal-select-many-checkbox td label,table.metal-select-one-radio td label {
+	white-space: nowrap;
+}
+
+/* metal-tabview */
+.tab-content > .active {
+	overflow: auto;
+}

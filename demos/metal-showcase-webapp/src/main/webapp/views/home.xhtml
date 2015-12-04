@@ -1,0 +1,30 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" template="/WEB-INF/templates/showcase-#{showcaseModelBean.deploymentType}.xhtml">
+
+	<ui:define name="content">
+		<h:outputStylesheet name="home.css" library="css" />
+		<div class="showcase-home">
+			<metal:image library="images" name="component-showcase.png" />
+			<p>
+				<a href="https://www.liferay.com/community/liferay-projects/liferay-faces">Liferay Faces</a> is an <strong>umbrella
+					project</strong> that provides support for the JavaServer<sup>TM</sup> Faces (JSF) standard within Liferay Portal.
+			</p>
+			<metal:panel>
+				<f:facet name="header">
+					<metal:outputText value="#{i18n['liferay-faces-metal']}" />
+				</f:facet>
+				<p>
+					The <a href="https://www.liferay.com/community/liferay-projects/liferay-faces/metal" target="_blank">Liferay
+						Faces Metal</a> sub-project includes a suite of JSF UI components that utilize <a href="http://metaljs.com/"
+						target="_blank">Metal UI</a>.
+				</p>
+				<p>
+					The Facelet component tags are prefixed with the <code>metal:</code> namespace and are compatible with <strong>webapp
+						and portlet environments</strong>.
+				</p>
+			</metal:panel>
+		</div>
+	</ui:define>
+
+</ui:composition>

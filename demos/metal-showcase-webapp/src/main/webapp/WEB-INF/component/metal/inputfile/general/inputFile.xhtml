@@ -1,0 +1,26 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase"
+	template="/WEB-INF/templates/component-1col-60.xhtml">
+
+	<ui:define name="col1">
+
+		<showcase:example>
+			<!-- The enclosing form must have enctype="multipart/form-data" in order for files to upload correctly. -->
+			<metal:form enctype="multipart/form-data" includeViewParams="false">
+					<metal:messages globalOnly="true" layout="table" />
+					<metal:inputFile fileUploadListener="#{inputFileBackingBean.handleFileUpload}" />
+					<hr />
+
+					<!-- Note: ajax="true" works in JSF 2.2 -->
+					<metal:commandButton ajax="false" value="#{i18n['submit']}" />
+			</metal:form>
+		</showcase:example>
+		<metal:form id="resultsForm" includeViewParams="true">
+			<showcase:results id="modelValue" label="#{i18n['model-value']}">
+				<ui:include src="../inputFileCommon.xhtml" />
+			</showcase:results>
+		</metal:form>
+
+	</ui:define>
+
+</ui:composition>

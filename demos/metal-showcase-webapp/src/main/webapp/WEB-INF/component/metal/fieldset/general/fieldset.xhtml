@@ -1,0 +1,24 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase"
+	template="/WEB-INF/templates/component-1col-60.xhtml">
+
+	<ui:define name="col1">
+		<metal:form>
+			<showcase:example renderedCheckbox="true">
+				<metal:messages globalOnly="true" layout="table" />
+				<metal:fieldset legend="#{i18n['fieldset-legend']}"
+					rendered="#{showcaseModelBean.selectedComponent.rendered}">
+					<metal:field label="#{i18n['text-box-1']}">
+						<metal:inputText value="#{fieldModelBean.firstName}" />
+					</metal:field>
+					<metal:field label="#{i18n['text-box-2']}">
+						<metal:inputText value="#{fieldModelBean.lastName}" />
+					</metal:field>
+					<metal:commandButton actionListener="#{fieldBackingBean.submit}" render="@form"
+						value="#{i18n['submit']}" />
+				</metal:fieldset>
+			</showcase:example>
+		</metal:form>
+	</ui:define>
+
+</ui:composition>

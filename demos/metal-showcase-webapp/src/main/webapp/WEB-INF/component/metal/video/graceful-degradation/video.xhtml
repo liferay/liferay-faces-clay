@@ -1,0 +1,17 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase"
+	xmlns:f="http://java.sun.com/jsf/core" template="/WEB-INF/templates/component-2col.xhtml">
+
+	<ui:define name="col1">
+		<showcase:example description="#{i18n['metal-video-graceful-degradation-example-1']}" number="1">
+			<metal:video styleClass="showcase-video" contentType="video/mp4" controls="true"
+				flashPlayer="#{resource['liferay-faces-metal:video/player.swf']}"
+				value="#{resource['videos:over-the-rainbow.mp4']}">
+				<f:facet name="flash">
+					<param name="flashVars" value="controls=true&amp;src=#{videoBacking.encodedMp4ResourceURL}" />
+				</f:facet>
+			</metal:video>
+		</showcase:example>
+	</ui:define>
+
+</ui:composition>

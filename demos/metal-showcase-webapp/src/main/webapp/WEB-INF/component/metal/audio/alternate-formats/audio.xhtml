@@ -1,0 +1,23 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase"
+	template="/WEB-INF/templates/component-2col.xhtml">
+
+	<ui:define name="col1">
+		<showcase:example description="#{i18n['metal-audio-alternate-formats-example-1']}" number="1">
+			<metal:audio styleClass="showcase-audio" controls="true">
+				<metal:resource library="audios" name="over-the-rainbow.mp3" />
+				<metal:resource library="audios" name="over-the-rainbow.wav" />
+				<metal:resource library="audios" name="over-the-rainbow.m4a" />
+				<metal:resource library="audios" name="over-the-rainbow.webm" />
+				<metal:resource library="audios" name="over-the-rainbow.ogg" />
+			</metal:audio>
+		</showcase:example>
+	</ui:define>
+
+	<ui:define name="col2">
+		<showcase:example description="#{i18n['metal-audio-alternate-formats-example-2']}" number="2">
+			<metal:audio styleClass="showcase-audio" controls="true" value="#{audioBacking.audios}" />
+		</showcase:example>
+	</ui:define>
+
+</ui:composition>

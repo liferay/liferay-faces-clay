@@ -1,0 +1,64 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-1col-80.xhtml">
+
+	<ui:define name="col1">
+		<metal:form id="myForm">
+			<showcase:example id="ex1" renderedCheckbox="true">
+				<metal:row>
+					<metal:column width="50">
+						<metal:field label="#{i18n['summary-position']}">
+							<metal:selectOneMenu value="#{dataTableBacking.summaryPosition}">
+								<f:selectItem itemLabel="#{i18n['top']}" itemValue="top" />
+								<f:selectItem itemLabel="#{i18n['bottom']}" itemValue="bottom" />
+								<f:selectItem itemLabel="#{i18n['left']}" itemValue="left" />
+								<f:selectItem itemLabel="#{i18n['right']}" itemValue="right" />
+								<f:selectItem itemLabel="#{i18n['none']}" itemValue="none" />
+								<f:ajax render="@form" />
+							</metal:selectOneMenu>
+						</metal:field>
+					</metal:column>
+					<metal:column width="50">
+						<metal:field label="#{i18n['rows-per-page']}">
+							<metal:selectOneMenu value="#{dataTableBacking.rowsPerPage}">
+								<f:selectItem itemLabel="5" itemValue="5" />
+								<f:selectItem itemLabel="10" itemValue="10" />
+								<f:selectItem itemLabel="15" itemValue="15" />
+								<f:selectItem itemLabel="20" itemValue="20" />
+								<f:ajax render="@form" />
+							</metal:selectOneMenu>
+						</metal:field>
+					</metal:column>
+				</metal:row>
+				<metal:dataTable id="customerTable" rendered="#{showcaseModelBean.selectedComponent.rendered}"
+					rows="#{dataTableBacking.rowsPerPage}" value="#{dataTableBacking.customerDataModel}" var="customer">
+					<f:facet name="header">
+						<metal:outputText value="#{i18n['customers']}" />
+						<metal:paginator summaryPosition="#{dataTableBacking.summaryPosition}" />
+					</f:facet>
+					<metal:column headerText="#{i18n['first-name']}">
+						<metal:outputText value="#{customer.firstName}" />
+					</metal:column>
+					<metal:column headerText="#{i18n['last-name']}">
+						<metal:outputText value="#{customer.lastName}" />
+					</metal:column>
+					<metal:column headerText="#{i18n['date-of-birth']}">
+						<metal:outputText value="#{customer.dateOfBirth}">
+							<f:convertDateTime pattern="MMM dd, yyyy" />
+						</metal:outputText>
+					</metal:column>
+					<metal:column headerText="#{i18n['country']}">
+						<metal:outputText value="#{customer.country.countryName}"/>
+					</metal:column>
+					<f:facet name="footer">
+						<metal:paginator ajax="false" firstPageLabel="#{i18n['first']}" lastPageLabel="#{i18n['last']}"
+							maxPageNumberControls="7" nextPageLabel="#{i18n['next']}"
+							previousPageLabel="#{i18n['previous']}" summaryPosition="none">
+						</metal:paginator>
+					</f:facet>
+				</metal:dataTable>
+			</showcase:example>
+		</metal:form>
+	</ui:define>
+
+</ui:composition>

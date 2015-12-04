@@ -1,0 +1,24 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-1col-60.xhtml">
+
+	<ui:define name="col1">
+		<metal:form>
+			<showcase:example renderedCheckbox="true">
+				<metal:selectOneMenu value="#{iconModelBean.iconName}">
+					<f:selectItem itemValue="star" />
+					<f:selectItem itemValue="zoom-out" />
+					<f:selectItem itemValue="print" />
+					<f:selectItem itemValue="shopping-cart" />
+					<f:selectItem itemValue="folder-open" />
+					<f:selectItem itemValue="resize-small" />
+					<f:selectItem itemValue="plus" />
+					<f:selectItem itemValue="music" />
+					<f:ajax render="icon" />
+				</metal:selectOneMenu>
+				<metal:icon id="icon" rendered="#{showcaseModelBean.selectedComponent.rendered}" name="#{iconModelBean.iconName}" />
+			</showcase:example>
+		</metal:form>
+	</ui:define>
+
+</ui:composition>

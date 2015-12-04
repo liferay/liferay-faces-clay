@@ -1,0 +1,88 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-1col-60.xhtml">
+
+	<ui:define name="col1">
+		<metal:form>
+			<showcase:example>
+				<p>
+					<metal:commandButton styleClass="btn-primary">
+						<metal:outputText value="#{i18n['primary']}" />
+					</metal:commandButton>
+					<metal:commandButton styleClass="btn-info">
+						<metal:outputText value="#{i18n['info']}" />
+					</metal:commandButton>
+					<metal:commandButton styleClass="btn-success">
+						<metal:outputText value="#{i18n['success']} " />
+						<metal:icon name="ok" />
+					</metal:commandButton>
+					<metal:commandButton styleClass="btn-warning">
+						<metal:outputText value="#{i18n['warning']}" />
+					</metal:commandButton>
+					<metal:commandButton styleClass="btn-danger">
+						<metal:icon name="remove" />
+						<metal:outputText value=" #{i18n['danger']}" />
+					</metal:commandButton>
+					<metal:commandButton styleClass="btn-link">
+						<metal:outputText value="#{i18n['link']}" />
+					</metal:commandButton>
+				</p>
+
+				<p>
+					<metal:commandButton styleClass="btn-primary btn-large">
+						<metal:outputText value="#{i18n['large']}" />
+					</metal:commandButton>
+					<metal:commandButton styleClass="btn-large">
+						<metal:outputText value="#{i18n['large']}" />
+					</metal:commandButton>
+				</p>
+
+				<p>
+					<metal:commandButton styleClass="btn-primary">
+						<metal:outputText value="#{i18n['default']}" />
+					</metal:commandButton>
+					<metal:commandButton>
+						<metal:outputText value="#{i18n['default']}" />
+					</metal:commandButton>
+				</p>
+
+				<p>
+					<metal:commandButton styleClass="btn-primary btn-small">
+						<metal:outputText value="#{i18n['small']}" />
+					</metal:commandButton>
+					<metal:commandButton styleClass="btn-small">
+						<metal:outputText value="#{i18n['small']}" />
+					</metal:commandButton>
+				</p>
+
+				<p>
+					<metal:commandButton styleClass="btn-primary btn-mini">
+						<metal:outputText value="#{i18n['mini']}" />
+					</metal:commandButton>
+					<metal:commandButton styleClass="btn-mini">
+						<metal:outputText value="#{i18n['mini']}" />
+					</metal:commandButton>
+				</p>
+
+				<p>
+					<metal:commandButton disabled="true" styleClass="btn-primary">
+						<metal:outputText value="#{i18n['disabled']}" />
+					</metal:commandButton>
+					<metal:commandButton disabled="true">
+						<metal:outputText value="#{i18n['disabled']}" />
+					</metal:commandButton>
+				</p>
+
+				<p>
+					<metal:commandButton styleClass="btn-primary btn-block">
+						<metal:outputText value="#{i18n['block']}" />
+					</metal:commandButton>
+					<metal:commandButton styleClass="btn-block">
+						<metal:outputText value="#{i18n['block']}" />
+					</metal:commandButton>
+				</p>
+			</showcase:example>
+		</metal:form>
+	</ui:define>
+
+</ui:composition>

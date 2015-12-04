@@ -1,0 +1,15 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase"
+	template="/WEB-INF/templates/component-1col-60.xhtml">
+
+	<ui:define name="col1">
+		<metal:form>
+			<showcase:example>
+				<metal:messages globalOnly="true" layout="table" />
+				<metal:commandButton actionListener="#{formBackingBean.submit}" render="@form"
+					value="#{i18n['submit-and-re-render-page']}" />
+			</showcase:example>
+		</metal:form>
+	</ui:define>
+
+</ui:composition>

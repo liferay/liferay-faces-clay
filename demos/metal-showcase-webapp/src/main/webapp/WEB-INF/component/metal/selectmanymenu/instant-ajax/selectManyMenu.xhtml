@@ -1,0 +1,30 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-1col-60.xhtml">
+
+	<ui:define name="col1">
+		<metal:form>
+			<showcase:example>
+				<metal:outputLabel value="#{i18n['favorite-liferay-benefit']}" />
+				<metal:selectManyMenu value="#{selectManyModelBean.favoriteIds}">
+					<f:selectItem itemLabel="Compatible" itemValue="1" />
+					<f:selectItem itemLabel="Enterprise Ready" itemValue="2" />
+					<f:selectItem itemLabel="Powerful Integration" itemValue="3" />
+					<f:selectItem itemLabel="Lightweight" itemValue="4" />
+					<f:selectItem itemLabel="Open Source" itemValue="5" />
+					<f:ajax render="@form" />
+				</metal:selectManyMenu>
+				<showcase:note smallIcon="true">
+					<metal:outputText escape="false" value="#{i18n['note-chromium-issue-4579']}" />
+				</showcase:note>
+			</showcase:example>
+			<showcase:results label="#{i18n['model-value']}">
+				<ui:repeat id="modelValue" value="#{selectManyModelBean.favoriteIds}" var="favoriteId">
+					<metal:outputText value="#{favoriteId}" />
+					<br />
+				</ui:repeat>
+			</showcase:results>
+		</metal:form>
+	</ui:define>
+
+</ui:composition>

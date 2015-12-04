@@ -1,0 +1,48 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-2col.xhtml">
+
+	<ui:define name="col1">
+		<!-- Example 1: Conversion to a Date using the converter attribute. -->
+		<metal:form>
+			<showcase:example description="#{i18n['conversion-to-a-date-using-converter-attribute']}" number="1">
+				<metal:field>
+					<metal:inputText id="text" converter="javax.faces.DateTime"
+						converterMessage="#{i18n['converter-message']}"
+						value="#{inputTextModelBean.date}" />
+					<br />
+					<metal:message for="text" />
+				</metal:field>
+				<hr />
+				<metal:commandButton action="#{inputTextBackingBean.submit}" render="@form" value="#{i18n['submit']}" />
+			</showcase:example>
+			<showcase:results label="#{i18n['model-value']}">
+				<metal:outputText id="modelValue" converter="javax.faces.DateTime" value="#{inputTextModelBean.date}" />
+			</showcase:results>
+		</metal:form>
+	</ui:define>
+
+	<ui:define name="col2">
+		<!-- Example 2: Conversion to a Date using an f:converter child tag. -->
+		<metal:form>
+			<showcase:example description="#{i18n['conversion-to-a-date-using-f-convertdatetime']}" number="2">
+				<metal:field>
+					<metal:inputText id="text" converterMessage="#{i18n['converter-message']}"
+						value="#{inputTextModelBean.date}">
+						<f:convertDateTime pattern="MM/dd/yyyy" />
+					</metal:inputText>
+					<br />
+					<metal:message for="text" />
+				</metal:field>
+				<hr />
+				<metal:commandButton action="#{inputTextBackingBean.submit}" render="@form" value="#{i18n['submit']}" />
+			</showcase:example>
+			<showcase:results label="#{i18n['model-value']}">
+				<metal:outputText id="modelValue" value="#{inputTextModelBean.date}">
+					<f:convertDateTime pattern="MM/dd/yyyy" />
+				</metal:outputText>
+			</showcase:results>
+		</metal:form>
+	</ui:define>
+
+</ui:composition>

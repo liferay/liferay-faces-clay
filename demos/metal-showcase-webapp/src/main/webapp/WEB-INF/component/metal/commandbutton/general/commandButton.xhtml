@@ -1,0 +1,41 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://liferay.com/faces/metal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase"
+	template="/WEB-INF/templates/component-3col.xhtml">
+
+	<ui:define name="col1">
+		<!-- Example 1: Styling via children -->
+		<metal:form>
+			<showcase:example description="#{i18n['metal-commandbutton-general-example-1']}" number="1"
+				renderedCheckbox="true">
+				<metal:commandButton rendered="#{showcaseModelBean.selectedComponent.rendered}" value="1234">
+					<metal:icon name="star" />
+					<metal:outputText value=" #{i18n['Button']} " />
+					<metal:image value="#{resource['images:liferay-faces-logo-small.png']}" />
+				</metal:commandButton>
+			</showcase:example>
+		</metal:form>
+	</ui:define>
+
+	<ui:define name="col2">
+		<!-- Example 2: Styling via image attribute -->
+		<metal:form>
+			<showcase:example description="#{i18n['metal-commandbutton-general-example-2']}" number="2"
+				renderedCheckbox="true">
+				<metal:commandButton image="#{resource['images:liferay-faces-logo-small.png']}"
+					rendered="#{showcaseModelBean.selectedComponent.rendered}" value="1234" />
+			</showcase:example>
+		</metal:form>
+	</ui:define>
+
+	<ui:define name="col3">
+		<!-- Example#3: Styling via value attribute (Note: This can only be used if the component does not have any -->
+		<!-- children and the component does not specify an image) -->
+		<metal:form>
+			<showcase:example description="#{i18n['metal-commandbutton-general-example-3']}" number="3"
+				renderedCheckbox="true">
+				<metal:commandButton rendered="#{showcaseModelBean.selectedComponent.rendered}" value="1234" />
+			</showcase:example>
+		</metal:form>
+	</ui:define>
+
+</ui:composition>

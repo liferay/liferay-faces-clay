@@ -1,0 +1,3 @@
+The files found under META-INF/resources/liferay-faces-alloy/audio and
+META-INF/resources/liferay-faces-alloy/video are subject to the license terms
+found in the alloy-ui-bsd-license.md file.
