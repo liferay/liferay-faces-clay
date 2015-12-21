@@ -1,0 +1,29 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase"
+	template="/WEB-INF/templates/component-2col.xhtml">
+
+	<ui:define name="col1">
+		<!-- Example 1: Script rendered inline -->
+		<crystal:form>
+			<showcase:example description="#{i18n['crystal-outputscript-general-example-1']}" number="1" renderedCheckbox="true">
+				<crystal:panelGroup rendered="#{showcaseModelBean.selectedComponent.rendered}">
+					<span id="example1:text"></span>
+				</crystal:panelGroup>
+				<crystal:outputScript rendered="#{showcaseModelBean.selectedComponent.rendered}">
+					document.getElementById('example1:text').innerHTML = '#{i18n['crystal-outputscript-general-script-1']}';
+				</crystal:outputScript>
+			</showcase:example>
+		</crystal:form>
+	</ui:define>
+
+	<ui:define name="col2">
+		<!-- Example 2: Script rendered at the bottom of the page -->
+		<showcase:example description="#{i18n['crystal-outputscript-general-example-2']}" number="2">
+			<span id="example2:text"></span>
+			<crystal:outputScript target="body">
+				document.getElementById('example2:text').innerHTML = '#{i18n['crystal-outputscript-general-script-2']}';
+			</crystal:outputScript>
+		</showcase:example>
+	</ui:define>
+
+</ui:composition>

@@ -1,0 +1,23 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-1col-60.xhtml">
+
+	<ui:define name="col1">
+
+		<showcase:example>
+			<crystal:form enctype="multipart/form-data">
+				<crystal:messages globalOnly="true" layout="table" />
+				<crystal:inputFile fileUploadListener="#{inputFileBackingBean.handleFileUpload}">
+					<f:ajax render=":modelValue" />
+				</crystal:inputFile>
+			</crystal:form>
+		</showcase:example>
+		<crystal:form id="resultsForm" includeViewParams="true">
+			<showcase:results id="modelValue" label="#{i18n['model-value']}">
+				<ui:include src="../inputFileCommon.xhtml" />
+			</showcase:results>
+		</crystal:form>
+
+	</ui:define>
+
+</ui:composition>

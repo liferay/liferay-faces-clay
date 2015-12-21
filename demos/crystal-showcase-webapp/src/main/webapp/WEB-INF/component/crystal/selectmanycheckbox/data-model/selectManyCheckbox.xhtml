@@ -1,0 +1,27 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-1col-80.xhtml">
+
+	<ui:define name="col1">
+		<crystal:form>
+			<showcase:example>
+				<crystal:outputLabel value="#{i18n['favorite-liferay-benefit']}" />
+				<crystal:selectManyCheckbox value="#{selectManyModelBean.favoriteIds}">
+					<f:selectItems value="#{selectManyModelBean.liferayBenefits}" var="benefit"
+						itemValue="#{benefit.id}"
+						itemLabel="#{benefit.label}" />
+				</crystal:selectManyCheckbox>
+				<hr />
+				<crystal:commandButton action="#{selectManyBackingBean.submit}" render="@form"
+					value="#{i18n['submit']}" />
+			</showcase:example>
+			<showcase:results label="#{i18n['model-value']}">
+				<ui:repeat id="modelValue" value="#{selectManyModelBean.favoriteIds}" var="favoriteId">
+					<crystal:outputText value="#{favoriteId}" />
+					<br />
+				</ui:repeat>
+			</showcase:results>
+		</crystal:form>
+	</ui:define>
+
+</ui:composition>

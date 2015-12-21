@@ -1,0 +1,64 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-1col-80.xhtml">
+
+	<ui:define name="col1">
+		<crystal:form id="myForm">
+			<showcase:example id="ex1" renderedCheckbox="true">
+				<crystal:row>
+					<crystal:column width="50">
+						<crystal:field label="#{i18n['summary-position']}">
+							<crystal:selectOneMenu value="#{dataTableBacking.summaryPosition}">
+								<f:selectItem itemLabel="#{i18n['top']}" itemValue="top" />
+								<f:selectItem itemLabel="#{i18n['bottom']}" itemValue="bottom" />
+								<f:selectItem itemLabel="#{i18n['left']}" itemValue="left" />
+								<f:selectItem itemLabel="#{i18n['right']}" itemValue="right" />
+								<f:selectItem itemLabel="#{i18n['none']}" itemValue="none" />
+								<f:ajax render="@form" />
+							</crystal:selectOneMenu>
+						</crystal:field>
+					</crystal:column>
+					<crystal:column width="50">
+						<crystal:field label="#{i18n['rows-per-page']}">
+							<crystal:selectOneMenu value="#{dataTableBacking.rowsPerPage}">
+								<f:selectItem itemLabel="5" itemValue="5" />
+								<f:selectItem itemLabel="10" itemValue="10" />
+								<f:selectItem itemLabel="15" itemValue="15" />
+								<f:selectItem itemLabel="20" itemValue="20" />
+								<f:ajax render="@form" />
+							</crystal:selectOneMenu>
+						</crystal:field>
+					</crystal:column>
+				</crystal:row>
+				<crystal:dataTable id="customerTable" rendered="#{showcaseModelBean.selectedComponent.rendered}"
+					rows="#{dataTableBacking.rowsPerPage}" value="#{dataTableBacking.customerDataModel}" var="customer">
+					<f:facet name="header">
+						<crystal:outputText value="#{i18n['customers']}" />
+						<crystal:paginator summaryPosition="#{dataTableBacking.summaryPosition}" />
+					</f:facet>
+					<crystal:column headerText="#{i18n['first-name']}">
+						<crystal:outputText value="#{customer.firstName}" />
+					</crystal:column>
+					<crystal:column headerText="#{i18n['last-name']}">
+						<crystal:outputText value="#{customer.lastName}" />
+					</crystal:column>
+					<crystal:column headerText="#{i18n['date-of-birth']}">
+						<crystal:outputText value="#{customer.dateOfBirth}">
+							<f:convertDateTime pattern="MMM dd, yyyy" />
+						</crystal:outputText>
+					</crystal:column>
+					<crystal:column headerText="#{i18n['country']}">
+						<crystal:outputText value="#{customer.country.countryName}"/>
+					</crystal:column>
+					<f:facet name="footer">
+						<crystal:paginator ajax="false" firstPageLabel="#{i18n['first']}" lastPageLabel="#{i18n['last']}"
+							maxPageNumberControls="7" nextPageLabel="#{i18n['next']}"
+							previousPageLabel="#{i18n['previous']}" summaryPosition="none">
+						</crystal:paginator>
+					</f:facet>
+				</crystal:dataTable>
+			</showcase:example>
+		</crystal:form>
+	</ui:define>
+
+</ui:composition>

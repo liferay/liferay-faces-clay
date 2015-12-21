@@ -1,0 +1,21 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-1col-60.xhtml">
+
+	<ui:define name="col1">
+		<crystal:form>
+			<showcase:example renderedCheckbox="true">
+				<crystal:panelGrid border="1" columns="3" rendered="#{showcaseModelBean.selectedComponent.rendered}">
+					<crystal:outputText value="Row 1 Col 1" />
+					<crystal:outputText value="Row 1 Col 2" />
+					<crystal:outputText value="Row 1 Col 3" />
+					<crystal:outputText value="Row 2 Col 1" />
+					<crystal:outputText value="Row 2 Col 2" />
+					<crystal:outputText value="Row 2 Col 3" />
+					<crystal:outputText value="Row 3 Col 1" />
+				</crystal:panelGrid>
+			</showcase:example>
+		</crystal:form>
+	</ui:define>
+
+</ui:composition>

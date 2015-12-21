@@ -75,10 +75,16 @@
 	</scm>
 
 	<modules>
+		<module>reslib</module>
 		<module>crystal</module>
+		<module>demos</module>
 	</modules>
 
 	<properties>
+		<bootstrap.version>3.3.6</bootstrap.version>
+		<bootstrap.zip.version>3.3.6</bootstrap.zip.version>
+		<crystalui.version>3.0.1</crystalui.version>
+		<crystalui.zip.version>${crystalui.version}</crystalui.zip.version>
 		<component.namespace>none</component.namespace>
 		<faces.group.id>com.sun.faces</faces.group.id>
 		<faces.api.artifact.id>jsf-api</faces.api.artifact.id>
@@ -86,13 +92,15 @@
 		<faces.api.version>${faces.spec.version}</faces.api.version>
 		<faces.impl.artifact.id>jsf-impl</faces.impl.artifact.id>
 		<faces.impl.scope>runtime</faces.impl.scope>
-		<faces.spec.version>2.2</faces.spec.version>
+		<faces.spec.version>2.1</faces.spec.version>
 		<faces.version>${mojarra.version}</faces.version>
 		<full.version>${project.version} (${timestamp} AD)</full.version>
 		<hibernate.validator.version>5.1.3.Final</hibernate.validator.version>
 		<jstl.version>1.2</jstl.version>
+		<liferay.faces.showcase.version>2.0.0-SNAPSHOT</liferay.faces.showcase.version>
+		<liferay.faces.util.version>2.0.0-SNAPSHOT</liferay.faces.util.version>
 		<log4j.version>1.2.14</log4j.version>
-		<mojarra.version>2.2.12</mojarra.version>
+		<mojarra.version>2.1.29-04</mojarra.version>
 		<myfaces.version>UNSUPPORTED</myfaces.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.stage>Production</project.stage>
@@ -148,8 +156,8 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.1</version>
 					<configuration>
-						<source>1.7</source>
-						<target>1.7</target>
+						<source>1.6</source>
+						<target>1.6</target>
 						<encoding>UTF-8</encoding>
 					</configuration>
 				</plugin>
@@ -231,6 +239,11 @@
 					<version>(,1.4]</version>
 				</plugin>
 				<plugin>
+					<groupId>org.appfuse.plugins</groupId>
+					<artifactId>maven-warpath-plugin</artifactId>
+					<version>2.1.0</version>
+				</plugin>
+				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>build-helper-maven-plugin</artifactId>
 					<version>1.8</version>
@@ -308,6 +321,15 @@
 			</properties>
 		</profile>
 		<profile>
+			<id>jsf22</id>
+			<properties>
+				<faces.spec.version>2.2</faces.spec.version>
+				<liferay.faces.showcase.version>3.0.0-SNAPSHOT</liferay.faces.showcase.version>
+				<liferay.faces.util.version>3.0.0-SNAPSHOT</liferay.faces.util.version>
+				<mojarra.version>2.2.12</mojarra.version>
+			</properties>
+		</profile>
+		<profile>
 			<id>mojarra</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
@@ -370,93 +392,20 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 		</profile>
-		<profile>
-			<id>generate-components</id>
-			<!-- Note: this profile can only be active from the alloy/, bridge-impl/, or portal/ directories. -->
-			<properties>
-				<authors>Neil Griffin</authors>
-				<component.api.output.dir>src/main/java</component.api.output.dir>
-				<component.namespace.URI>http://liferay.com/faces/${component.namespace}</component.namespace.URI>
-			</properties>
-			<build>
-				<plugins>
-					<plugin>
-						<artifactId>maven-resources-plugin</artifactId>
-						<version>2.7</version>
-						<executions>
-							<execution>
-								<id>copy-resources</id>
-								<goals>
-									<goal>copy-resources</goal>
-								</goals>
-								<phase>initialize</phase>
-								<configuration>
-									<outputDirectory>${project.build.outputDirectory}</outputDirectory>
-									<resources>
-										<resource>
-											<directory>../util</directory>
-											<includes>
-												<include>generator.properties</include>
-											</includes>
-											<filtering>true</filtering>
-										</resource>
-									</resources>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>exec-maven-plugin</artifactId>
-						<version>1.2.1</version>
-						<executions>
-							<execution>
-								<goals>
-									<goal>java</goal>
-								</goals>
-								<phase>generate-sources</phase>
-								<configuration>
-									<includeProjectDependencies>false</includeProjectDependencies>
-									<includePluginDependencies>true</includePluginDependencies>
-									<mainClass>com.liferay.alloy.tools.builder.faces.FacesBuilder</mainClass>
-									<systemProperties>
-										<systemProperty>
-											<key>build-ext</key>
-											<value>${project.build.outputDirectory}/generator.properties</value>
-										</systemProperty>
-									</systemProperties>
-									<executableDependency>
-										<groupId>com.liferay.alloy</groupId>
-										<artifactId>alloy-generator</artifactId>
-									</executableDependency>
-								</configuration>
-							</execution>
-						</executions>
-						<dependencies>
-							<dependency>
-								<groupId>com.liferay.alloy</groupId>
-								<artifactId>alloy-generator</artifactId>
-								<version>0.1.1</version>
-							</dependency>
-						</dependencies>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
 	</profiles>
 
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>com.liferay.faces.alloy</groupId>
-				<artifactId>liferay-faces-alloy</artifactId>
+				<groupId>com.liferay.faces.crystal</groupId>
+				<artifactId>liferay-faces-crystal</artifactId>
 				<version>${project.version}</version>
 				<scope>runtime</scope>
 			</dependency>
 			<dependency>
 				<groupId>com.liferay.faces.util</groupId>
 				<artifactId>liferay-faces-util</artifactId>
-				<version>22.0.0-SNAPSHOT</version>
+				<version>${liferay.faces.util.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.sun.faces</groupId>

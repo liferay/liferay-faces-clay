@@ -1,0 +1,88 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-1col-60.xhtml">
+
+	<ui:define name="col1">
+		<crystal:form>
+			<showcase:example>
+				<p>
+					<crystal:commandButton styleClass="btn-primary">
+						<crystal:outputText value="#{i18n['primary']}" />
+					</crystal:commandButton>
+					<crystal:commandButton styleClass="btn-info">
+						<crystal:outputText value="#{i18n['info']}" />
+					</crystal:commandButton>
+					<crystal:commandButton styleClass="btn-success">
+						<crystal:outputText value="#{i18n['success']} " />
+						<crystal:icon name="ok" />
+					</crystal:commandButton>
+					<crystal:commandButton styleClass="btn-warning">
+						<crystal:outputText value="#{i18n['warning']}" />
+					</crystal:commandButton>
+					<crystal:commandButton styleClass="btn-danger">
+						<crystal:icon name="remove" />
+						<crystal:outputText value=" #{i18n['danger']}" />
+					</crystal:commandButton>
+					<crystal:commandButton styleClass="btn-link">
+						<crystal:outputText value="#{i18n['link']}" />
+					</crystal:commandButton>
+				</p>
+
+				<p>
+					<crystal:commandButton styleClass="btn-primary btn-large">
+						<crystal:outputText value="#{i18n['large']}" />
+					</crystal:commandButton>
+					<crystal:commandButton styleClass="btn-large">
+						<crystal:outputText value="#{i18n['large']}" />
+					</crystal:commandButton>
+				</p>
+
+				<p>
+					<crystal:commandButton styleClass="btn-primary">
+						<crystal:outputText value="#{i18n['default']}" />
+					</crystal:commandButton>
+					<crystal:commandButton>
+						<crystal:outputText value="#{i18n['default']}" />
+					</crystal:commandButton>
+				</p>
+
+				<p>
+					<crystal:commandButton styleClass="btn-primary btn-small">
+						<crystal:outputText value="#{i18n['small']}" />
+					</crystal:commandButton>
+					<crystal:commandButton styleClass="btn-small">
+						<crystal:outputText value="#{i18n['small']}" />
+					</crystal:commandButton>
+				</p>
+
+				<p>
+					<crystal:commandButton styleClass="btn-primary btn-mini">
+						<crystal:outputText value="#{i18n['mini']}" />
+					</crystal:commandButton>
+					<crystal:commandButton styleClass="btn-mini">
+						<crystal:outputText value="#{i18n['mini']}" />
+					</crystal:commandButton>
+				</p>
+
+				<p>
+					<crystal:commandButton disabled="true" styleClass="btn-primary">
+						<crystal:outputText value="#{i18n['disabled']}" />
+					</crystal:commandButton>
+					<crystal:commandButton disabled="true">
+						<crystal:outputText value="#{i18n['disabled']}" />
+					</crystal:commandButton>
+				</p>
+
+				<p>
+					<crystal:commandButton styleClass="btn-primary btn-block">
+						<crystal:outputText value="#{i18n['block']}" />
+					</crystal:commandButton>
+					<crystal:commandButton styleClass="btn-block">
+						<crystal:outputText value="#{i18n['block']}" />
+					</crystal:commandButton>
+				</p>
+			</showcase:example>
+		</crystal:form>
+	</ui:define>
+
+</ui:composition>

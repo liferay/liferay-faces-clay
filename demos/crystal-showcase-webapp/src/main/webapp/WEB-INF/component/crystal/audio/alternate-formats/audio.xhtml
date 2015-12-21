@@ -1,0 +1,23 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase"
+	template="/WEB-INF/templates/component-2col.xhtml">
+
+	<ui:define name="col1">
+		<showcase:example description="#{i18n['crystal-audio-alternate-formats-example-1']}" number="1">
+			<crystal:audio styleClass="showcase-audio" controls="true">
+				<crystal:resource library="audios" name="over-the-rainbow.mp3" />
+				<crystal:resource library="audios" name="over-the-rainbow.wav" />
+				<crystal:resource library="audios" name="over-the-rainbow.m4a" />
+				<crystal:resource library="audios" name="over-the-rainbow.webm" />
+				<crystal:resource library="audios" name="over-the-rainbow.ogg" />
+			</crystal:audio>
+		</showcase:example>
+	</ui:define>
+
+	<ui:define name="col2">
+		<showcase:example description="#{i18n['crystal-audio-alternate-formats-example-2']}" number="2">
+			<crystal:audio styleClass="showcase-audio" controls="true" value="#{audioBacking.audios}" />
+		</showcase:example>
+	</ui:define>
+
+</ui:composition>

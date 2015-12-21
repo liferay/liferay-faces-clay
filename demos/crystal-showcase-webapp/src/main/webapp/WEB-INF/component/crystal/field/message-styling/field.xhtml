@@ -1,0 +1,44 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase"
+	template="/WEB-INF/templates/component-4col.xhtml">
+
+	<ui:define name="col1">
+		<crystal:form>
+			<showcase:example description="#{i18n['crystal-field-message-styling-example-1']}" number="1">
+				<crystal:field id="field" label="#{i18n['info']}">
+					<crystal:inputText id="inputText" validator="#{fieldBackingBean.infoValidator}"
+						value="default text" />
+					<crystal:message for="inputText" />
+				</crystal:field>
+				<crystal:commandButton render="field" value="#{i18n['submit-and-re-render-field']}" />
+			</showcase:example>
+		</crystal:form>
+	</ui:define>
+
+	<ui:define name="col2">
+		<crystal:form>
+			<showcase:example description="#{i18n['crystal-field-message-styling-example-2']}" number="2">
+				<crystal:field id="field" label="#{i18n['warning']}">
+					<crystal:inputText id="inputText" validator="#{fieldBackingBean.warningValidator}"
+						value="default text" />
+					<crystal:message for="inputText" />
+				</crystal:field>
+				<crystal:commandButton render="field" value="#{i18n['submit-and-re-render-field']}" />
+			</showcase:example>
+		</crystal:form>
+	</ui:define>
+
+	<ui:define name="col3">
+		<crystal:form>
+			<showcase:example description="#{i18n['crystal-field-message-styling-example-3']}" number="3">
+				<crystal:field id="field" label="#{i18n['error']}">
+					<crystal:inputText id="inputText" validator="#{fieldBackingBean.errorValidator}"
+						value="default text" />
+					<crystal:message for="inputText" />
+				</crystal:field>
+				<crystal:commandButton render="field" value="#{i18n['submit-and-re-render-field']}" />
+			</showcase:example>
+		</crystal:form>
+	</ui:define>
+
+</ui:composition>

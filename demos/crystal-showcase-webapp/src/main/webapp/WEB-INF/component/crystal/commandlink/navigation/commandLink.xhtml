@@ -1,0 +1,28 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:showcase="http://liferay.com/faces/showcase" template="/WEB-INF/templates/component-1col-60.xhtml">
+
+	<ui:define name="col1">
+		<crystal:form>
+			<showcase:example>
+				<crystal:field label="#{i18n['ajax']}">
+					<f:facet name="label">
+						<crystal:selectBooleanCheckbox value="#{commandModelBean.ajax}">
+							<f:ajax render="nav" />
+						</crystal:selectBooleanCheckbox>
+					</f:facet>
+				</crystal:field>
+				<!-- Navigation based on outcome of navigation-case defined in navigation-rule.xml -->
+				<crystal:commandLink id="nav" action="toParam" ajax="#{commandModelBean.ajax}">
+					<crystal:outputText value="#{i18n['to-param-page']} " />
+					<crystal:icon name="arrow-right" />
+				</crystal:commandLink>
+			</showcase:example>
+			<showcase:results label="#{i18n['parameter-value']}">
+				<crystal:outputText id="parameterValue"
+					value="foo=#{facesContext.externalContext.requestParameterMap['foo']}" />
+			</showcase:results>
+		</crystal:form>
+	</ui:define>
+
+</ui:composition>

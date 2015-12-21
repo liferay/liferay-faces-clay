@@ -1,0 +1,21 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase"
+	template="/WEB-INF/templates/component-1col-80.xhtml">
+
+	<ui:define name="col1">
+		<crystal:outputScript target="body">
+			document.getElementById('#{attributeValue.clientId}').innerHTML =
+				'action=' + document.getElementById('#{myForm.clientId}').action;
+		</crystal:outputScript>
+		<crystal:form binding="#{myForm}" includeViewParams="true">
+			<crystal:messages globalOnly="true" />
+			<showcase:example>
+				<crystal:outputText escape="false" value="#{i18n['form-action-attribute-view-params-description']}" />
+			</showcase:example>
+			<showcase:results label="#{i18n['attribute-value']}">
+				<crystal:outputText id="attributeValue" binding="#{attributeValue}" />
+			</showcase:results>
+		</crystal:form>
+	</ui:define>
+
+</ui:composition>

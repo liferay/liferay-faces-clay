@@ -1,0 +1,144 @@
+/* crystal-button-row */
+div.crystal-button-row {
+	overflow: visible;
+}
+
+div.crystal-button-row:after {
+	clear: both;
+	content: " ";
+	display: block;
+	overflow: hidden;
+}
+
+div.crystal-button-row button.crystal-button, div.crystal-button-row button.crystal-command-button {
+	margin-right: 4px;
+}
+
+/* crystal-input-file */
+.crystal-input-file .select-files-box,.crystal-input-file .upload-files-box {
+	display: inline-block;
+}
+
+.crystal-input-file-button-hidden {
+	display: none;
+}
+
+/* crystal-messages */
+.crystal-messages {
+	border: 1px solid #ddd;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+table.crystal-messages {
+	border-collapse: separate;
+	border-spacing: 4px;
+	width: 100%;
+}
+
+ul.crystal-messages {
+	list-style-position: inside;
+	margin: 0px;
+	padding: 4px;
+}
+
+/* crystal-panel: bootstrap 3 backport */
+div.crystal-panel {
+	margin-bottom: 20px;
+	background-color: #fff;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+div.crystal-panel div.crystal-panel-body {
+	padding: 15px;
+}
+
+div.crystal-panel div.crystal-panel-heading {
+	padding: 10px 15px;
+	border-bottom: 1px solid transparent;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+div.crystal-panel div.crystal-panel-heading>.dropdown .dropdown-toggle {
+	color: inherit;
+}
+
+div.crystal-panel .crystal-panel-title {
+	color: inherit;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+div.crystal-panel .crystal-panel-title>a {
+	color: inherit;
+}
+
+div.crystal-panel div.crystal-panel-footer {
+	padding: 10px 15px;
+	background-color: #f5f5f5;
+	border-top: 1px solid #ddd;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+div.crystal-panel-default {
+	border-color: #ddd;
+}
+
+div.crystal-panel-default>div.crystal-panel-heading {
+	color: #333;
+	background-color: #f5f5f5;
+	border-color: #ddd;
+}
+
+div.crystal-panel-default>div.crystal-panel-heading+.crystal-panel-collapse>div.crystal-panel-body {
+	border-top-color: #ddd;
+}
+
+div.crystal-panel-default>div.crystal-panel-heading .crystal-panel-badge {
+	color: #f5f5f5;
+	background-color: #333;
+}
+
+div.crystal-panel-default>div.panel-footer+div.panel-collapse>div.panel-body {
+	border-bottom-color: #ddd;
+}
+
+/* crystal-select-boolean-checkbox */
+.crystal-select-boolean-checkbox {
+	vertical-align: baseline;
+}
+
+/* crystal-select-one-radio */
+table.crystal-select-one-radio {
+	border-collapse: separate;
+}
+
+/* crystal-select-many-checkbox */
+table.crystal-select-many-checkbox td,table.crystal-select-one-radio td {
+	padding-right: 30px;
+}
+
+table.crystal-select-many-checkbox td input[type='checkbox'] {
+	vertical-align: baseline;
+}
+
+table.crystal-select-many-checkbox td label {
+	display: inline;
+}
+
+table.crystal-select-many-checkbox td label,table.crystal-select-one-radio td label {
+	white-space: nowrap;
+}
+
+/* crystal-tabview */
+.tab-content > .active {
+	overflow: auto;
+}

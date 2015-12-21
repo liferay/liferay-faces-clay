@@ -1,0 +1,30 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" template="/WEB-INF/templates/showcase-#{showcaseModelBean.deploymentType}.xhtml">
+
+	<ui:define name="content">
+		<h:outputStylesheet name="home.css" library="css" />
+		<div class="showcase-home">
+			<crystal:image library="images" name="component-showcase.png" />
+			<p>
+				<a href="https://www.liferay.com/community/liferay-projects/liferay-faces">Liferay Faces</a> is an <strong>umbrella
+					project</strong> that provides support for the JavaServer<sup>TM</sup> Faces (JSF) standard within Liferay Portal.
+			</p>
+			<crystal:panel>
+				<f:facet name="header">
+					<crystal:outputText value="#{i18n['liferay-faces-crystal']}" />
+				</f:facet>
+				<p>
+					The <a href="https://www.liferay.com/community/liferay-projects/liferay-faces/crystal" target="_blank">Liferay
+						Faces Crystal</a> sub-project includes a suite of JSF UI components that utilize <a href="http://metaljs.com/"
+						target="_blank">Crystal UI</a>.
+				</p>
+				<p>
+					The Facelet component tags are prefixed with the <code>crystal:</code> namespace and are compatible with <strong>webapp
+						and portlet environments</strong>.
+				</p>
+			</crystal:panel>
+		</div>
+	</ui:define>
+
+</ui:composition>

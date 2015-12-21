@@ -1,0 +1,37 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:crystal="http://liferay.com/faces/crystal"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:showcase="http://liferay.com/faces/showcase"
+	template="/WEB-INF/templates/component-2col.xhtml">
+
+	<ui:define name="col1">
+		<!-- Example 1: ValueChangeListener execution when immediate is true -->
+		<crystal:form>
+			<showcase:example description="#{i18n['valuechangelistener-execution-when-immediate-is-true']}" number="1">
+				<crystal:messages globalOnly="true" styleClass="feedback" />
+				<crystal:inputTextarea id="textarea" immediate="true" value="#{inputTextModelBean.text}"
+					valueChangeListener="#{inputTextBackingBean.valueChangeListener}" />
+				<hr />
+				<crystal:commandButton action="#{inputTextBackingBean.submit}" render="@form" value="#{i18n['submit']}" />
+			</showcase:example>
+			<showcase:results label="#{i18n['model-value']}">
+				<crystal:outputText id="modelValue" value="#{inputTextModelBean.text}" />
+			</showcase:results>
+		</crystal:form>
+	</ui:define>
+
+	<ui:define name="col2">
+		<!-- Example 2: ValueChangeListener execution when immediate is false (the default) -->
+		<crystal:form>
+			<showcase:example description="#{i18n['valuechangelistener-execution-when-immediate-is-false']}" number="2">
+				<crystal:messages globalOnly="true" styleClass="feedback" />
+				<crystal:inputTextarea id="textarea" value="#{inputTextModelBean.text}"
+					valueChangeListener="#{inputTextBackingBean.valueChangeListener}" />
+				<hr />
+				<crystal:commandButton action="#{inputTextBackingBean.submit}" render="@form" value="#{i18n['submit']}" />
+			</showcase:example>
+			<showcase:results label="#{i18n['model-value']}">
+				<crystal:outputText id="modelValue" value="#{inputTextModelBean.text}" />
+			</showcase:results>
+		</crystal:form>
+	</ui:define>
+
+</ui:composition>
