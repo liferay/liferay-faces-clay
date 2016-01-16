@@ -15,6 +15,7 @@ package com.liferay.faces.metal.application.internal;
 
 import com.liferay.faces.util.application.ResourceDependencyVerifier;
 import com.liferay.faces.util.application.ResourceDependencyVerifierWrapper;
+import com.liferay.faces.util.application.ResourceUtil;
 import com.liferay.faces.util.product.ProductConstants;
 import com.liferay.faces.util.product.ProductMap;
 import javax.faces.component.UIComponent;
@@ -27,7 +28,7 @@ public class ResourceDependencyVerifierMetalImpl extends ResourceDependencyVerif
 	// Private Constants
 	private static final boolean LIFERAY_PORTAL_DETECTED = ProductMap.getInstance().get(ProductConstants.LIFERAY_PORTAL)
 		.isDetected();
-	private static final String BOOTSTRAP_CSS_RESOURCE_ID = getResourceDependencyId("liferay-faces-metal-reslib", "css/bootstrap.min.css");
+	private static final String BOOTSTRAP_CSS_RESOURCE_ID = ResourceUtil.getResourceDependencyId("liferay-faces-metal-reslib", "css/bootstrap.min.css");
 
 	// Private Members
 	private ResourceDependencyVerifier wrappedResourceDependencyVerifier;
@@ -41,7 +42,7 @@ public class ResourceDependencyVerifierMetalImpl extends ResourceDependencyVerif
 
 		boolean resourceDependencySatisfied;
 
-		if (LIFERAY_PORTAL_DETECTED && BOOTSTRAP_CSS_RESOURCE_ID.equals(getResourceDependencyId(componentResource))) {
+		if (LIFERAY_PORTAL_DETECTED && BOOTSTRAP_CSS_RESOURCE_ID.equals(ResourceUtil.getResourceDependencyId(componentResource))) {
 			resourceDependencySatisfied = true;
 		}
 		else {

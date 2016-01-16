@@ -24,14 +24,15 @@ public class ResourceDependencyVerifierFactoryMetalImpl extends ResourceDependen
 	// Private Members
 	private ResourceDependencyVerifierFactory wrappedResourceDependencyVerifierFactory;
 
-	public ResourceDependencyVerifierFactoryMetalImpl(ResourceDependencyVerifierFactory wrappedResourceDependencyVerifierFactory) {
-		this.wrappedResourceDependencyVerifierFactory = wrappedResourceDependencyVerifierFactory;
+	public ResourceDependencyVerifierFactoryMetalImpl(ResourceDependencyVerifierFactory resourceDependencyVerifierFactory) {
+		this.wrappedResourceDependencyVerifierFactory = resourceDependencyVerifierFactory;
 	}
 
 	@Override
 	public ResourceDependencyVerifier getResourceDependencyVerifier() {
 
 		ResourceDependencyVerifier resourceDependencyVerifier = wrappedResourceDependencyVerifierFactory.getResourceDependencyVerifier();
+
 		return new ResourceDependencyVerifierMetalImpl(resourceDependencyVerifier);
 	}
 
