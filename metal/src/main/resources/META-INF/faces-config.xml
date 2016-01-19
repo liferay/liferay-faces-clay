@@ -8,7 +8,7 @@
 	<factory>
 		<factory-extension>
 			<util:message-context-factory>com.liferay.faces.metal.context.internal.MessageContextFactoryMetalImpl</util:message-context-factory>
-			<util:resource-dependency-verifier-factory>com.liferay.faces.metal.application.internal.ResourceDependencyVerifierFactoryMetalImpl</util:resource-dependency-verifier-factory>
+			<util:resource-verifier-factory>com.liferay.faces.metal.application.internal.ResourceVerifierFactoryMetalImpl</util:resource-verifier-factory>
 		</factory-extension>
 	</factory>
 
