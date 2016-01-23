@@ -320,7 +320,7 @@
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/audio/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -446,7 +446,7 @@
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/body/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -656,7 +656,7 @@
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/button/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -758,7 +758,7 @@
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/buttonrow/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -902,7 +902,7 @@
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/column/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -1160,7 +1160,7 @@
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/commandbutton/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -1418,7 +1418,7 @@
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/commandlink/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -1460,7 +1460,7 @@
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/dataitem/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -1520,7 +1520,7 @@
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/datalist/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -1760,7 +1760,7 @@
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/datatable/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -1880,7 +1880,7 @@
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/field/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -1994,7 +1994,7 @@
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/fieldset/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -2156,7 +2156,7 @@
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/form/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -2192,7 +2192,7 @@
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/head/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -2246,7 +2246,7 @@
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/icon/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -2432,7 +2432,7 @@
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/image/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -2734,7 +2734,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/inputfile/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -2819,7 +2819,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/inputhidden/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -3084,7 +3084,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/inputsecret/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -3343,7 +3343,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/inputtext/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -3596,7 +3596,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/inputtextarea/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -3830,7 +3830,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/link/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -3857,7 +3857,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/loadconstants/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -3904,7 +3904,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/menu/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -4042,7 +4042,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/message/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -4192,7 +4192,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/messages/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -4276,7 +4276,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/outputformat/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -4450,7 +4450,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/outputlabel/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -4666,7 +4666,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/outputlink/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -4726,7 +4726,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/outputscript/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -4786,7 +4786,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/outputstylesheet/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -4870,7 +4870,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/outputtext/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -5026,7 +5026,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/paginator/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -5146,7 +5146,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/panel/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -5368,7 +5368,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/panelgrid/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -5476,7 +5476,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/panelgroup/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -5505,7 +5505,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/resource/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -5547,7 +5547,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/row/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -5782,7 +5782,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/selectbooleancheckbox/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -6053,7 +6053,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/selectmanycheckbox/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -6318,7 +6318,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/selectmanylistbox/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -6577,7 +6577,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/selectmanymenu/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -6836,7 +6836,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/selectonelistbox/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -7089,7 +7089,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/selectonemenu/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -7342,7 +7342,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/selectoneradio/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -7660,7 +7660,7 @@ java.lang.Object)</method-signature>
 		</attribute>
 		<tag-extension>
 			<vdldoc:example-url>http://www.liferayfaces.org/web/guest/showcase/-/component/metal/video/general</vdldoc:example-url>
-			<vdldoc:since>2.0.0</vdldoc:since>
+			<vdldoc:since>1.0.0</vdldoc:since>
 		</tag-extension>
 	</tag>
 </facelet-taglib>
