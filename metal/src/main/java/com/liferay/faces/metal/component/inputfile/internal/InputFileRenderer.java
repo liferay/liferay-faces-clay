@@ -28,10 +28,7 @@ import javax.faces.render.FacesRenderer;
 
 import com.liferay.faces.metal.component.inputfile.FileUploadEvent;
 import com.liferay.faces.metal.component.inputfile.InputFile;
-import com.liferay.faces.util.context.MessageContext;
-import com.liferay.faces.util.context.MessageContextFactory;
 import com.liferay.faces.util.context.map.MultiPartFormData;
-import com.liferay.faces.util.factory.FactoryExtensionFinder;
 import com.liferay.faces.util.model.UploadedFile;
 import com.liferay.faces.util.product.ProductConstants;
 import com.liferay.faces.util.product.ProductMap;
@@ -97,14 +94,6 @@ public class InputFileRenderer extends InputFileRendererBase {
 	public Object getConvertedValue(FacesContext facesContext, UIComponent uiComponent, Object submittedValue)
 		throws ConverterException {
 		return submittedValue;
-	}
-
-	protected MessageContext getMessageContext() {
-
-		MessageContextFactory messageContextFactory = (MessageContextFactory) FactoryExtensionFinder.getFactory(
-				MessageContextFactory.class);
-
-		return messageContextFactory.getMessageContext();
 	}
 
 	protected String getParentFormClientId(UIComponent uiComponent) {

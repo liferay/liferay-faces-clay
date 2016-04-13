@@ -45,7 +45,6 @@ import com.liferay.faces.metal.render.internal.MetalRendererUtil;
 import com.liferay.faces.util.component.Styleable;
 import com.liferay.faces.util.context.MessageContext;
 import com.liferay.faces.util.context.MessageContextFactory;
-import com.liferay.faces.util.factory.FactoryExtensionFinder;
 import com.liferay.faces.util.logging.Logger;
 import com.liferay.faces.util.logging.LoggerFactory;
 import com.liferay.faces.util.render.RendererUtil;
@@ -309,8 +308,8 @@ public class PaginatorRenderer extends PaginatorRendererBase implements Componen
 		Paginator paginator = (Paginator) componentSystemEvent.getComponent();
 
 		if (paginator.isAjax()) {
-			MetalRendererUtil.addDefaultAjaxBehavior(paginator, paginator.getExecute(), paginator.getProcess(),
-				"@this", paginator.getRender(), paginator.getUpdate(), "@this @for");
+			MetalRendererUtil.addDefaultAjaxBehavior(paginator, paginator.getExecute(), paginator.getProcess(), "@this",
+				paginator.getRender(), paginator.getUpdate(), "@this @for");
 		}
 	}
 
@@ -391,9 +390,7 @@ public class PaginatorRenderer extends PaginatorRendererBase implements Componen
 		int paginatorLast = Math.min(first + rows, rowCount);
 
 		// Get an internationalized message that contains the pagination summary.
-		MessageContextFactory messageContextFactory = (MessageContextFactory) FactoryExtensionFinder.getFactory(
-				MessageContextFactory.class);
-		MessageContext messageContext = messageContextFactory.getMessageContext();
+		MessageContext messageContext = MessageContextFactory.getMessageContextInstance();
 		String message = messageContext.getMessage(locale, "results-x-x-of-x-page-x-of-x", paginatorFirst,
 				paginatorLast, rowCount, curPageNumber, pageCount);
 

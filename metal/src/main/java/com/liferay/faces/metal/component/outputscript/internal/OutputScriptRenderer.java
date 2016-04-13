@@ -29,7 +29,6 @@ import com.liferay.faces.metal.component.outputscript.OutputScript;
 import com.liferay.faces.util.client.Script;
 import com.liferay.faces.util.client.ScriptFactory;
 import com.liferay.faces.util.context.FacesRequestContext;
-import com.liferay.faces.util.factory.FactoryExtensionFinder;
 import com.liferay.faces.util.render.internal.BufferedScriptResponseWriter;
 
 
@@ -66,8 +65,7 @@ public class OutputScriptRenderer extends OutputScriptRendererBase {
 				facesContext.setResponseWriter(responseWriter);
 
 				String bufferedScriptString = bufferedScriptResponseWriter.toString();
-				ScriptFactory scriptFactory = (ScriptFactory) FactoryExtensionFinder.getFactory(ScriptFactory.class);
-				Script script = scriptFactory.getScript(bufferedScriptString);
+				Script script = ScriptFactory.getScriptInstance(bufferedScriptString);
 				FacesRequestContext facesRequestContext = FacesRequestContext.getCurrentInstance();
 				facesRequestContext.addScript(script);
 			}
