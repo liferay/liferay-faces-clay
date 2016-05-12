@@ -20,15 +20,14 @@ import javax.faces.context.FacesContext;
 import javax.faces.context.ResponseWriter;
 
 import com.liferay.faces.util.render.DelegatingRendererBase;
-import com.liferay.faces.util.render.internal.DelegationResponseWriter;
 
 
 /**
- * In order to render metal:selectManyCheckbox and metal:selectOneRadio using CSS classes and elements consistent
- * with Liferay Portal's (and MetalUI's) style, SelectDelegatingRendererBase replaces the default ResponseWriter with
- * {@link TableSuppressingResponseWriter} and {@link LabelSurroundingResponseWriter}. This class is designed to be
- * extended by {@link com.liferay.faces.metal.component.selectmanycheckbox.internal.SelectManyCheckboxRenderer} and
- * {@link com.liferay.faces.metal.component.selectoneradio.internal.SelectOneRadioRenderer}.
+ * In order to render metal:selectManyCheckbox and metal:selectOneRadio using CSS classes and elements consistent with
+ * Liferay Portal's (and MetalUI's) style, SelectDelegatingRendererBase replaces the default ResponseWriter with {@link
+ * TableSuppressingResponseWriter} and {@link LabelSurroundingResponseWriter}. This class is designed to be extended by
+ * {@link com.liferay.faces.metal.component.selectmanycheckbox.internal.SelectManyCheckboxRenderer} and {@link
+ * com.liferay.faces.metal.component.selectoneradio.internal.SelectOneRadioRenderer}.
  *
  * @author  Kyle Stiemann
  */
@@ -62,9 +61,9 @@ public abstract class SelectDelegatingRendererBase extends DelegatingRendererBas
 		super.encodeEnd(facesContext, uiComponent, getSelectDelegationResponseWriter(responseWriter));
 	}
 
-	private DelegationResponseWriter getSelectDelegationResponseWriter(ResponseWriter responseWriter) {
+	private ResponseWriter getSelectDelegationResponseWriter(ResponseWriter responseWriter) {
 
-		DelegationResponseWriter delegationResponseWriter = new TableSuppressingResponseWriter(responseWriter);
+		ResponseWriter delegationResponseWriter = new TableSuppressingResponseWriter(responseWriter);
 		delegationResponseWriter = new LabelSurroundingResponseWriter(delegationResponseWriter, getSelectType());
 
 		return delegationResponseWriter;
