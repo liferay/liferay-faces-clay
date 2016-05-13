@@ -3,11 +3,11 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.liferay.faces.metal</groupId>
-		<artifactId>liferay-faces-metal-parent</artifactId>
+		<groupId>com.liferay.faces</groupId>
+		<artifactId>com.liferay.faces.metal.parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>liferay-faces-metal</artifactId>
+	<artifactId>com.liferay.faces.metal</artifactId>
 	<name>Liferay Faces Metal</name>
 
 	<build>
@@ -60,8 +60,8 @@
 			<artifactId>javax.servlet.jsp-api</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.liferay.faces.util</groupId>
-			<artifactId>liferay-faces-util</artifactId>
+			<groupId>com.liferay.faces</groupId>
+			<artifactId>com.liferay.faces.util</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -122,16 +122,16 @@
 										<argument>${project.build.directory}/metal-tags.xml</argument>
 									</arguments>
 									<executableDependency>
-										<groupId>com.liferay.faces.generator</groupId>
-										<artifactId>liferay-faces-generator</artifactId>
+										<groupId>com.liferay.faces</groupId>
+										<artifactId>com.liferay.faces.generator</artifactId>
 									</executableDependency>
 								</configuration>
 							</execution>
 						</executions>
 						<dependencies>
 							<dependency>
-								<groupId>com.liferay.faces.generator</groupId>
-								<artifactId>liferay-faces-generator</artifactId>
+								<groupId>com.liferay.faces</groupId>
+								<artifactId>com.liferay.faces.generator</artifactId>
 								<version>1.0-SNAPSHOT</version>
 							</dependency>
 						</dependencies>

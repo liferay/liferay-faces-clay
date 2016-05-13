@@ -3,11 +3,11 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.liferay.faces.metal</groupId>
-		<artifactId>liferay-faces-metal-parent</artifactId>
+		<groupId>com.liferay.faces</groupId>
+		<artifactId>com.liferay.faces.metal.parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>liferay-faces-metal-reslib</artifactId>
+	<artifactId>com.liferay.faces.metal.reslib</artifactId>
 	<name>Liferay Faces Metal Resource Library</name>
 
 	<dependencies>
