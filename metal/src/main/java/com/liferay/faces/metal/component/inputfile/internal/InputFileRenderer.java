@@ -32,7 +32,6 @@ import com.liferay.faces.util.context.map.MultiPartFormData;
 import com.liferay.faces.util.model.UploadedFile;
 import com.liferay.faces.util.product.ProductConstants;
 import com.liferay.faces.util.product.ProductMap;
-import com.liferay.faces.util.render.internal.DelegationResponseWriter;
 
 
 /**
@@ -86,7 +85,7 @@ public class InputFileRenderer extends InputFileRendererBase {
 		// Delegate writing of the entire <input type="file"...> ... </input> element to the delegate
 		// renderer.
 		ResponseWriter responseWriter = facesContext.getResponseWriter();
-		DelegationResponseWriter delegationResponseWriter = new InputFileDelegationResponseWriter(responseWriter);
+		ResponseWriter delegationResponseWriter = new InputFileDelegationResponseWriter(responseWriter);
 		super.encodeEnd(facesContext, uiComponent, delegationResponseWriter);
 	}
 

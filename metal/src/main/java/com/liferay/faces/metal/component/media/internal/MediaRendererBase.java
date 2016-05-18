@@ -14,9 +14,9 @@
 package com.liferay.faces.metal.component.media.internal;
 //J-
 
+import com.liferay.faces.util.render.PassThroughRenderer;
 import javax.annotation.Generated;
 
-import com.liferay.faces.metal.render.internal.PassThroughRenderer;
 
 
 /**
