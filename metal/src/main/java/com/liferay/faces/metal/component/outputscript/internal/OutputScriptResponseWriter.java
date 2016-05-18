@@ -16,22 +16,22 @@ package com.liferay.faces.metal.component.outputscript.internal;
 import java.io.IOException;
 
 import javax.faces.context.ResponseWriter;
-
-import com.liferay.faces.util.render.internal.DelegationResponseWriterBase;
+import javax.faces.context.ResponseWriterWrapper;
 
 
 /**
  * @author  Kyle Stiemann
  */
-public class OutputScriptResponseWriter extends DelegationResponseWriterBase {
+public class OutputScriptResponseWriter extends ResponseWriterWrapper {
 
 	// Private Data Members
 	private String metalBeginScript;
 	private boolean firstWriteText;
+	private ResponseWriter wrappedResponseWriter;
 
 	public OutputScriptResponseWriter(ResponseWriter responseWriter, String metalBeginScript) {
 
-		super(responseWriter);
+		this.wrappedResponseWriter = responseWriter;
 		this.metalBeginScript = metalBeginScript;
 		this.firstWriteText = true;
 	}
@@ -51,5 +51,10 @@ public class OutputScriptResponseWriter extends DelegationResponseWriterBase {
 		}
 
 		super.writeText(text, property);
+	}
+
+	@Override
+	public ResponseWriter getWrapped() {
+		return wrappedResponseWriter;
 	}
 }

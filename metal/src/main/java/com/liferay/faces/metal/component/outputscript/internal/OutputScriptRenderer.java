@@ -29,7 +29,7 @@ import com.liferay.faces.metal.component.outputscript.OutputScript;
 import com.liferay.faces.util.client.Script;
 import com.liferay.faces.util.client.ScriptFactory;
 import com.liferay.faces.util.context.FacesRequestContext;
-import com.liferay.faces.util.render.internal.BufferedScriptResponseWriter;
+import com.liferay.faces.util.render.BufferedScriptResponseWriter;
 
 
 /**
