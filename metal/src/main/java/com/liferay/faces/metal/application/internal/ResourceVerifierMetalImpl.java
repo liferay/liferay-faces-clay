@@ -42,6 +42,11 @@ public class ResourceVerifierMetalImpl extends ResourceVerifierWrapper {
 	}
 
 	@Override
+	public ResourceVerifier getWrapped() {
+		return wrappedResourceVerifier;
+	}
+
+	@Override
 	public boolean isDependencySatisfied(FacesContext facesContext, UIComponent componentResource) {
 
 		boolean dependencySatisfied;
@@ -55,10 +60,5 @@ public class ResourceVerifierMetalImpl extends ResourceVerifierWrapper {
 		}
 
 		return dependencySatisfied;
-	}
-
-	@Override
-	public ResourceVerifier getWrapped() {
-		return wrappedResourceVerifier;
 	}
 }

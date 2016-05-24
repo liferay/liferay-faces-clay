@@ -34,6 +34,7 @@ import com.liferay.faces.metal.component.form.Form;
 /**
  * @author  Neil Griffin
  */
+
 //J-
 @FacesRenderer(componentFamily = Form.COMPONENT_FAMILY, rendererType = Form.RENDERER_TYPE)
 //J+

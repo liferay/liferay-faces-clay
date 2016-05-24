@@ -44,6 +44,7 @@ import com.liferay.faces.util.render.RendererUtil;
 /**
  * @author  Neil Griffin
  */
+
 //J-
 @FacesRenderer(componentFamily = DataTable.COMPONENT_FAMILY, rendererType = DataTable.RENDERER_TYPE)
 @ResourceDependencies(
@@ -178,6 +179,11 @@ public class DataTableRenderer extends DataTableRendererBase {
 		// Encode the closing <table> element that represents the metal:table.
 		ResponseWriter responseWriter = facesContext.getResponseWriter();
 		responseWriter.endElement("table");
+	}
+
+	@Override
+	public boolean getRendersChildren() {
+		return true;
 	}
 
 	protected void encodeCaptionFacet(FacesContext facesContext, ResponseWriter responseWriter, DataTable dataTable)
@@ -409,8 +415,7 @@ public class DataTableRenderer extends DataTableRendererBase {
 								String headerText = metalColumn.getHeaderText();
 
 								if (headerText != null) {
-									encodeHeaderText(facesContext, responseWriter, dataTable, metalColumn,
-										headerText);
+									encodeHeaderText(facesContext, responseWriter, dataTable, metalColumn, headerText);
 								}
 							}
 
@@ -612,10 +617,5 @@ public class DataTableRenderer extends DataTableRendererBase {
 		}
 
 		return clientBehaviorScript;
-	}
-
-	@Override
-	public boolean getRendersChildren() {
-		return true;
 	}
 }

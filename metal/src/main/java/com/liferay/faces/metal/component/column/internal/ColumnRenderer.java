@@ -42,9 +42,7 @@ import com.liferay.faces.util.render.RendererUtil;
 @ResourceDependencies(
 	{
 		@ResourceDependency(library = "javax.faces", name = "jsf.js"),
-		@ResourceDependency(
-			library = "liferay-faces-metal-reslib", name = "css/bootstrap.min.css"
-		)
+		@ResourceDependency(library = "liferay-faces-metal-reslib", name = "css/bootstrap.min.css")
 	}
 )
 public class ColumnRenderer extends ColumnRendererBase implements ComponentSystemEventListener {

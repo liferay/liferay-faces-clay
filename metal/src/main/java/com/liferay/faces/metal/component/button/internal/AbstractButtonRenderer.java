@@ -192,22 +192,6 @@ public abstract class AbstractButtonRenderer extends ButtonRendererBase {
 		responseWriter.endElement(BUTTON);
 	}
 
-	protected boolean hasMenu(UIComponent uiComponent) {
-		boolean hasMenu = false;
-		List<UIComponent> children = uiComponent.getChildren();
-
-		for (UIComponent child : children) {
-
-			if (child instanceof Menu) {
-				hasMenu = true;
-
-				break;
-			}
-		}
-
-		return hasMenu;
-	}
-
 	@Override
 	public boolean getRendersChildren() {
 		return true;
@@ -226,5 +210,21 @@ public abstract class AbstractButtonRenderer extends ButtonRendererBase {
 		}
 
 		return uiChildCount;
+	}
+
+	protected boolean hasMenu(UIComponent uiComponent) {
+		boolean hasMenu = false;
+		List<UIComponent> children = uiComponent.getChildren();
+
+		for (UIComponent child : children) {
+
+			if (child instanceof Menu) {
+				hasMenu = true;
+
+				break;
+			}
+		}
+
+		return hasMenu;
 	}
 }

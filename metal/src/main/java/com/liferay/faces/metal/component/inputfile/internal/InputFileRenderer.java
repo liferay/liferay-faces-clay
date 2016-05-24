@@ -37,6 +37,7 @@ import com.liferay.faces.util.product.ProductMap;
 /**
  * @author  Neil Griffin
  */
+
 //J-
 @FacesRenderer(componentFamily = InputFile.COMPONENT_FAMILY, rendererType = InputFile.RENDERER_TYPE)
 @ResourceDependencies(

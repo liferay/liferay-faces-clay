@@ -58,25 +58,6 @@ public abstract class InputFileDecoderBase implements InputFileDecoder {
 		uploadedFiles.add(uploadedFile);
 	}
 
-	protected String stripIllegalCharacters(String fileName) {
-
-		// FACES-64: Need to strip out invalid characters.
-		// http://technet.microsoft.com/en-us/library/cc956689.aspx
-		String strippedFileName = fileName;
-
-		if (fileName != null) {
-
-			int pos = fileName.lastIndexOf(".");
-			strippedFileName = fileName.replaceAll("[\\\\/\\[\\]:|<>+;=.?\"]", "-");
-
-			if (pos > 0) {
-				strippedFileName = strippedFileName.substring(0, pos) + "." + strippedFileName.substring(pos + 1);
-			}
-		}
-
-		return strippedFileName;
-	}
-
 	protected MultiPartConfig getFacesServletMultiPartConfig(ExternalContext externalContext) {
 
 		MultiPartConfig facesServletMultiPartConfig = null;
@@ -133,5 +114,24 @@ public abstract class InputFileDecoderBase implements InputFileDecoder {
 		}
 
 		return uploadedFilesDir;
+	}
+
+	protected String stripIllegalCharacters(String fileName) {
+
+		// FACES-64: Need to strip out invalid characters.
+		// http://technet.microsoft.com/en-us/library/cc956689.aspx
+		String strippedFileName = fileName;
+
+		if (fileName != null) {
+
+			int pos = fileName.lastIndexOf(".");
+			strippedFileName = fileName.replaceAll("[\\\\/\\[\\]:|<>+;=.?\"]", "-");
+
+			if (pos > 0) {
+				strippedFileName = strippedFileName.substring(0, pos) + "." + strippedFileName.substring(pos + 1);
+			}
+		}
+
+		return strippedFileName;
 	}
 }
