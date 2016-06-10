@@ -30,8 +30,8 @@ import com.liferay.faces.metal.component.inputfile.FileUploadEvent;
 import com.liferay.faces.metal.component.inputfile.InputFile;
 import com.liferay.faces.util.context.map.MultiPartFormData;
 import com.liferay.faces.util.model.UploadedFile;
-import com.liferay.faces.util.product.ProductConstants;
-import com.liferay.faces.util.product.ProductMap;
+import com.liferay.faces.util.product.Product;
+import com.liferay.faces.util.product.ProductFactory;
 
 
 /**
@@ -50,8 +50,8 @@ import com.liferay.faces.util.product.ProductMap;
 public class InputFileRenderer extends InputFileRendererBase {
 
 	// Private Constants
-	private static final boolean LIFERAY_FACES_BRIDGE_DETECTED = ProductMap.getInstance().get(
-			ProductConstants.LIFERAY_FACES_BRIDGE).isDetected();
+	private static final boolean LIFERAY_FACES_BRIDGE_DETECTED = ProductFactory.getProduct(
+			Product.Name.LIFERAY_FACES_BRIDGE).isDetected();
 
 	@Override
 	public void decode(FacesContext facesContext, UIComponent uiComponent) {

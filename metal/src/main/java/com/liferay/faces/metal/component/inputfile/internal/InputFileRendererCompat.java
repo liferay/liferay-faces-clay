@@ -20,8 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.liferay.faces.metal.component.inputfile.InputFile;
 import com.liferay.faces.util.product.Product;
-import com.liferay.faces.util.product.ProductConstants;
-import com.liferay.faces.util.product.ProductMap;
+import com.liferay.faces.util.product.ProductFactory;
 import com.liferay.faces.util.render.DelegatingRendererBase;
 
 
@@ -33,7 +32,7 @@ import com.liferay.faces.util.render.DelegatingRendererBase;
 public abstract class InputFileRendererCompat extends DelegatingRendererBase {
 
 	// Private Constants
-	private static final Product JSF = ProductMap.getInstance().get(ProductConstants.JSF);
+	private static final Product JSF = ProductFactory.getProduct(Product.Name.JSF);
 
 	@Override
 	public String getDelegateComponentFamily() {

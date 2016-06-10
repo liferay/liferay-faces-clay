@@ -19,8 +19,8 @@ import javax.faces.context.FacesContext;
 import com.liferay.faces.util.application.ResourceUtil;
 import com.liferay.faces.util.application.ResourceVerifier;
 import com.liferay.faces.util.application.ResourceVerifierWrapper;
-import com.liferay.faces.util.product.ProductConstants;
-import com.liferay.faces.util.product.ProductMap;
+import com.liferay.faces.util.product.Product;
+import com.liferay.faces.util.product.ProductFactory;
 
 
 /**
@@ -29,7 +29,7 @@ import com.liferay.faces.util.product.ProductMap;
 public class ResourceVerifierMetalImpl extends ResourceVerifierWrapper {
 
 	// Private Constants
-	private static final boolean LIFERAY_PORTAL_DETECTED = ProductMap.getInstance().get(ProductConstants.LIFERAY_PORTAL)
+	private static final boolean LIFERAY_PORTAL_DETECTED = ProductFactory.getProduct(Product.Name.LIFERAY_PORTAL)
 		.isDetected();
 	private static final String BOOTSTRAP_CSS_RESOURCE_ID = ResourceUtil.getResourceId("liferay-faces-metal-reslib",
 			"css/bootstrap.min.css");
