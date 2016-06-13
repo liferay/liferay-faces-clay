@@ -10,7 +10,7 @@
 			Kyle Stiemann
 		</authors>
 		<copyright-year>${copyright.year}</copyright-year>
-		<default-since>2.0.0</default-since>
+		<default-since>1.0.0</default-since>
 		<faces-spec-version>${faces.spec.version}</faces-spec-version>
 	</taglib-extension>
 	<function>
@@ -658,7 +658,7 @@
 			<extends-tags>keyboardDOMEvents mouseDOMEvents styleable uiComponentBaseInherited</extends-tags>
 			<extra-style-classes>fieldset</extra-style-classes>
 			<parent-class><![CDATA[javax.faces.component.UIPanel]]></parent-class>
-			<renderer-parent-class><![CDATA[com.liferay.faces.metal.render.internal.PassThroughRenderer]]></renderer-parent-class>
+			<renderer-parent-class><![CDATA[com.liferay.faces.util.render.PassThroughRenderer]]></renderer-parent-class>
 		</tag-extension>
 	</tag>
 	<tag>
@@ -1188,7 +1188,7 @@ void fileUploadListener(com.liferay.faces.util.component.inputfile.FileUploadEve
 		<tag-extension>
 			<extends-tags>keyboardDOMEvents mouseDOMEvents resourceCommon</extends-tags>
 			<generate-taglib-xml>false</generate-taglib-xml>
-			<renderer-parent-class><![CDATA[com.liferay.faces.metal.render.internal.PassThroughRenderer]]></renderer-parent-class>
+			<renderer-parent-class><![CDATA[com.liferay.faces.util.render.PassThroughRenderer]]></renderer-parent-class>
 		</tag-extension>
 	</tag>
 	<tag>

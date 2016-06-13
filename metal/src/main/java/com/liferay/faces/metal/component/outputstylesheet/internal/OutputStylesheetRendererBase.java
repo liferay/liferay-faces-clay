@@ -18,6 +18,7 @@ import javax.annotation.Generated;
 
 import com.liferay.faces.metal.component.outputscriptstylesheet.internal.OutputScriptStylesheetRendererBase;
 
+import com.liferay.faces.metal.component.outputstylesheet.OutputStylesheet;
 
 
 /**
