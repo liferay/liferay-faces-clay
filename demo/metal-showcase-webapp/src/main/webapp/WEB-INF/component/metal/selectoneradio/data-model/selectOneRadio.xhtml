@@ -6,7 +6,7 @@
 		<metal:form>
 			<showcase:example>
 				<metal:outputLabel value="#{i18n['favorite-liferay-benefit']}" />
-				<metal:selectOneRadio value="#{selectOneModelBean.favoriteId}">
+				<metal:selectOneRadio id="selectOneRadio" value="#{selectOneModelBean.favoriteId}">
 					<f:selectItems value="#{selectOneModelBean.liferayBenefits}" var="benefit" itemValue="#{benefit.id}"
 						itemLabel="#{benefit.label}" />
 				</metal:selectOneRadio>

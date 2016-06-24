@@ -8,7 +8,7 @@
 			<showcase:example description="#{i18n['valuechangelistener-execution-when-immediate-is-true']}" number="1">
 				<metal:outputLabel value="#{i18n['favorite-liferay-benefit']}" />
 				<metal:messages globalOnly="true" styleClass="feedback" />
-				<metal:selectManyListbox immediate="true" value="#{selectManyModelBean.favoriteIds}"
+				<metal:selectManyListbox id="selectManyListbox" immediate="true" value="#{selectManyModelBean.favoriteIds}"
 					valueChangeListener="#{selectManyBackingBean.valueChangeListener}">
 					<f:selectItem itemLabel="Compatible" itemValue="1" />
 					<f:selectItem itemLabel="Enterprise Ready" itemValue="2" />
@@ -20,10 +20,11 @@
 				<metal:commandButton render="@form" value="#{i18n['submit']}" />
 			</showcase:example>
 			<showcase:results label="#{i18n['model-value']}">
-				<ui:repeat id="modelValue" value="#{selectManyModelBean.favoriteIds}" var="favoriteId">
-					<metal:outputText value="#{favoriteId}" />
-					<br />
-				</ui:repeat>
+				<metal:panelGroup id="modelValue">
+					<ui:repeat value="#{selectManyModelBean.favoriteIds}" var="favoriteId">
+						<metal:outputText value="#{favoriteId}" /><br />
+					</ui:repeat>
+				</metal:panelGroup>
 			</showcase:results>
 		</metal:form>
 	</ui:define>
@@ -34,7 +35,7 @@
 			<showcase:example description="#{i18n['valuechangelistener-execution-when-immediate-is-false']}" number="2">
 				<metal:outputLabel value="#{i18n['favorite-liferay-benefit']}" />
 				<metal:messages globalOnly="true" styleClass="feedback" />
-				<metal:selectManyListbox value="#{selectManyModelBean.favoriteIds}"
+				<metal:selectManyListbox id="selectManyListbox" value="#{selectManyModelBean.favoriteIds}"
 					valueChangeListener="#{selectManyBackingBean.valueChangeListener}">
 					<f:selectItem itemLabel="Compatible" itemValue="1" />
 					<f:selectItem itemLabel="Enterprise Ready" itemValue="2" />
@@ -46,10 +47,11 @@
 				<metal:commandButton render="@form" value="#{i18n['submit']}" />
 			</showcase:example>
 			<showcase:results label="#{i18n['model-value']}">
-				<ui:repeat id="modelValue" value="#{selectManyModelBean.favoriteIds}" var="favoriteId">
-					<metal:outputText value="#{favoriteId}" />
-					<br />
-				</ui:repeat>
+				<metal:panelGroup id="modelValue">
+					<ui:repeat value="#{selectManyModelBean.favoriteIds}" var="favoriteId">
+						<metal:outputText value="#{favoriteId}" /><br />
+					</ui:repeat>
+				</metal:panelGroup>
 			</showcase:results>
 		</metal:form>
 	</ui:define>

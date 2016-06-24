@@ -8,7 +8,7 @@
 			<showcase:example description="#{i18n['valuechangelistener-execution-when-immediate-is-true']}" number="1">
 				<metal:outputLabel value="#{i18n['agree']}" />
 				<metal:messages globalOnly="true" styleClass="feedback" />
-				<metal:selectBooleanCheckbox immediate="true" value="#{selectBooleanCheckboxModelBean.agree}"
+				<metal:selectBooleanCheckbox id="checkbox" immediate="true" value="#{selectBooleanCheckboxModelBean.agree}"
 					valueChangeListener="#{selectBooleanCheckboxBackingBean.valueChangeListener}">
 				</metal:selectBooleanCheckbox>
 				<hr />
@@ -26,7 +26,7 @@
 			<showcase:example description="#{i18n['valuechangelistener-execution-when-immediate-is-false']}" number="2">
 				<metal:outputLabel value="#{i18n['agree']}" />
 				<metal:messages globalOnly="true" styleClass="feedback" />
-				<metal:selectBooleanCheckbox value="#{selectBooleanCheckboxModelBean.agree}"
+				<metal:selectBooleanCheckbox id="checkbox" value="#{selectBooleanCheckboxModelBean.agree}"
 					valueChangeListener="#{selectBooleanCheckboxBackingBean.valueChangeListener}">
 				</metal:selectBooleanCheckbox>
 				<hr />

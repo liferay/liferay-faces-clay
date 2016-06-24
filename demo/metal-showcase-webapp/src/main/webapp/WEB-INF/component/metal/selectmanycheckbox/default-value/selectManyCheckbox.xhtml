@@ -6,7 +6,7 @@
 		<metal:form>
 			<showcase:example>
 				<metal:outputLabel value="#{i18n['favorite-liferay-benefit']}" />
-				<metal:selectManyCheckbox value="#{selectManyModelBean.benefitIds}">
+				<metal:selectManyCheckbox id="selectManyCheckbox" value="#{selectManyModelBean.benefitIds}">
 					<f:converter converterId="javax.faces.Long" />
 					<f:selectItem itemLabel="Compatible" itemValue="1" />
 					<f:selectItem itemLabel="Enterprise Ready" itemValue="2" />
@@ -19,10 +19,11 @@
 					value="#{i18n['submit']}" />
 			</showcase:example>
 			<showcase:results label="#{i18n['model-value']}">
-				<ui:repeat id="modelValue" value="#{selectManyModelBean.benefitIds}" var="benefitId">
-					<metal:outputText value="#{benefitId}" />
-					<br />
-				</ui:repeat>
+				<metal:panelGroup id="modelValue">
+					<ui:repeat value="#{selectManyModelBean.benefitIds}" var="benefitId">
+						<metal:outputText value="#{benefitId}" /><br />
+					</ui:repeat>
+				</metal:panelGroup>
 			</showcase:results>
 		</metal:form>
 	</ui:define>
