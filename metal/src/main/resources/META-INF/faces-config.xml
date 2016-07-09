@@ -7,7 +7,7 @@
 	<name>LiferayFacesMetal</name>
 	<factory>
 		<factory-extension>
-			<util:message-context-factory>com.liferay.faces.metal.context.internal.MessageContextFactoryMetalImpl</util:message-context-factory>
+			<util:i18n-factory>com.liferay.faces.metal.i18n.internal.I18nFactoryMetalImpl</util:i18n-factory>
 			<util:resource-verifier-factory>com.liferay.faces.metal.application.internal.ResourceVerifierFactoryMetalImpl</util:resource-verifier-factory>
 		</factory-extension>
 	</factory>
