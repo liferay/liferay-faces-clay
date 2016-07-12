@@ -13,6 +13,8 @@
  */
 package com.liferay.faces.metal.application.internal;
 
+import java.io.Serializable;
+
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 
@@ -26,7 +28,10 @@ import com.liferay.faces.util.product.ProductFactory;
 /**
  * @author  Kyle Stiemann
  */
-public class ResourceVerifierMetalImpl extends ResourceVerifierWrapper {
+public class ResourceVerifierMetalImpl extends ResourceVerifierWrapper implements Serializable {
+
+	// serialVersionUID
+	private static final long serialVersionUID = 8437791501446799339L;
 
 	// Private Constants
 	private static final boolean LIFERAY_PORTAL_DETECTED = ProductFactory.getProduct(Product.Name.LIFERAY_PORTAL)
