@@ -13,6 +13,8 @@
  */
 package com.liferay.faces.metal.application.internal;
 
+import java.io.Serializable;
+
 import com.liferay.faces.util.application.ResourceVerifier;
 import com.liferay.faces.util.application.ResourceVerifierFactory;
 
@@ -20,21 +22,25 @@ import com.liferay.faces.util.application.ResourceVerifierFactory;
 /**
  * @author  Kyle Stiemann
  */
-public class ResourceVerifierFactoryMetalImpl extends ResourceVerifierFactory {
+public class ResourceVerifierFactoryMetalImpl extends ResourceVerifierFactory implements Serializable {
 
-	// Private Members
+	// serialVersionUID
+	private static final long serialVersionUID = 8511251292734457805L;
+
+	// Private Data Members
+	private ResourceVerifier resourceVerifier;
 	private ResourceVerifierFactory wrappedResourceVerifierFactory;
 
 	public ResourceVerifierFactoryMetalImpl(ResourceVerifierFactory resourceVerifierFactory) {
+
+		ResourceVerifier resourceVerifier = resourceVerifierFactory.getResourceVerifier();
+		this.resourceVerifier = new ResourceVerifierMetalImpl(resourceVerifier);
 		this.wrappedResourceVerifierFactory = resourceVerifierFactory;
 	}
 
 	@Override
 	public ResourceVerifier getResourceVerifier() {
-
-		ResourceVerifier resourceVerifier = wrappedResourceVerifierFactory.getResourceVerifier();
-
-		return new ResourceVerifierMetalImpl(resourceVerifier);
+		return resourceVerifier;
 	}
 
 	@Override
