@@ -13,6 +13,8 @@
  */
 package com.liferay.faces.metal.i18n.internal;
 
+import java.io.Serializable;
+
 import com.liferay.faces.util.i18n.I18n;
 import com.liferay.faces.util.i18n.I18nFactory;
 
@@ -20,15 +22,19 @@ import com.liferay.faces.util.i18n.I18nFactory;
 /**
  * @author  Neil Griffin
  */
-public class i18nFactoryMetalImpl extends I18nFactory {
+public class I18nFactoryMetalImpl extends I18nFactory implements Serializable {
+
+	// serialVersionUID
+	private static final long serialVersionUID = 4955397110119488146L;
 
 	// Private Data Members
 	private I18n i18n;
 	private I18nFactory wrappedI18nFactory;
 
-	public i18nFactoryMetalImpl(I18nFactory i18nFactory) {
-		I18n wrappedI18n = i18nFactory.getI18n();
-		this.i18n = new I18nMetalImpl(wrappedI18n);
+	public I18nFactoryMetalImpl(I18nFactory i18nFactory) {
+
+		I18n i18n = i18nFactory.getI18n();
+		this.i18n = new I18nMetalImpl(i18n);
 		this.wrappedI18nFactory = i18nFactory;
 	}
 
