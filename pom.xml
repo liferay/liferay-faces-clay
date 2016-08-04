@@ -104,7 +104,6 @@
 		<myfaces.version>UNSUPPORTED</myfaces.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.stage>Production</project.stage>
-		<short.version>1.0</short.version>
 		<surefire.version>2.12</surefire.version>
 		<validation-api.version>1.1.0.Final</validation-api.version>
 		<war.packaging.excludes>
