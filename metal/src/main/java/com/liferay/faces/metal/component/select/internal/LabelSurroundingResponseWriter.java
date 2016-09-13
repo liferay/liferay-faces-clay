@@ -26,7 +26,7 @@ import javax.faces.context.ResponseWriterWrapper;
  * This class is designed to move &lt;input&gt;s rendered by {@link
  * com.liferay.faces.metal.component.selectmanycheckbox.internal.SelectManyCheckboxRenderer} and {@link
  * com.liferay.faces.metal.component.selectoneradio.internal.SelectOneRadioRenderer} inside their &lt;label&gt; tags.
- * This is done in order to be more consistent with Liferay Portal's (and MetalUI's) style.
+ * This is done in order to be more consistent with Liferay Portal's (and MetalJS's) style.
  *
  * @author  Kyle Stiemann
  */

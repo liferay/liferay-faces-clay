@@ -24,7 +24,7 @@ import com.liferay.faces.util.render.DelegatingRendererBase;
 
 /**
  * In order to render metal:selectManyCheckbox and metal:selectOneRadio using CSS classes and elements consistent with
- * Liferay Portal's (and MetalUI's) style, SelectDelegatingRendererBase replaces the default ResponseWriter with {@link
+ * Liferay Portal's (and MetalJS's) style, SelectDelegatingRendererBase replaces the default ResponseWriter with {@link
  * TableSuppressingResponseWriter} and {@link LabelSurroundingResponseWriter}. This class is designed to be extended by
  * {@link com.liferay.faces.metal.component.selectmanycheckbox.internal.SelectManyCheckboxRenderer} and {@link
  * com.liferay.faces.metal.component.selectoneradio.internal.SelectOneRadioRenderer}.

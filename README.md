@@ -1,7 +1,7 @@
 # Liferay Faces Metal
 
 [Liferay Faces Metal](http://www.liferay.com/community/liferay-projects/liferay-faces/overview) is a JavaServer&trade;
-Faces (JSF) component suite based on [MetalUI](http://metalui.com/). Visit the
+Faces (JSF) component suite based on [MetalJS](http://metaljs.com/). Visit the
 [Showcase](http://www.liferayfaces.org/web/guest/showcase) to try an online demo of the components.
 
 ## License

@@ -166,7 +166,7 @@ public abstract class MediaBase extends UIComponentBase {
 	/**
 	 * <code>flashPlayer</code> attribute description:
 	 * <br /><br />
-	 * A context-relative path, resource URL, or FacesResource that can be used to retrieve the Adobe&reg; Flash&reg; player. The default flash player is the flash player bundled with MetalUI. <strong>Note:</strong> The MetalUI player does not support <code>.ogv</code> or <code>.webm</code> formats.
+	 * A context-relative path, resource URL, or FacesResource that can be used to retrieve the Adobe&reg; Flash&reg; player. The default flash player is the flash player bundled with MetalJS. <strong>Note:</strong> The MetalJS player does not support <code>.ogv</code> or <code>.webm</code> formats.
 	 */
 	public Object getFlashPlayer() {
 		return (Object) getStateHelper().eval(MediaPropertyKeys.flashPlayer, null);
@@ -175,7 +175,7 @@ public abstract class MediaBase extends UIComponentBase {
 	/**
 	 * <code>flashPlayer</code> attribute description:
 	 * <br /><br />
-	 * A context-relative path, resource URL, or FacesResource that can be used to retrieve the Adobe&reg; Flash&reg; player. The default flash player is the flash player bundled with MetalUI. <strong>Note:</strong> The MetalUI player does not support <code>.ogv</code> or <code>.webm</code> formats.
+	 * A context-relative path, resource URL, or FacesResource that can be used to retrieve the Adobe&reg; Flash&reg; player. The default flash player is the flash player bundled with MetalJS. <strong>Note:</strong> The MetalJS player does not support <code>.ogv</code> or <code>.webm</code> formats.
 	 */
 	public void setFlashPlayer(Object flashPlayer) {
 		getStateHelper().put(MediaPropertyKeys.flashPlayer, flashPlayer);

@@ -79,16 +79,16 @@
 									<target>
 										<echo message="Running with reslib profile ..." />
 										<!--
-										<move file="${project.build.directory}/classes/META-INF/resources/metal-${metalui.version}/LICENSE.md" tofile="${project.build.directory}/classes/META-INF/metalui-bsd-license.md" />
+										<move file="${project.build.directory}/classes/META-INF/resources/metal-${metaljs.version}/LICENSE.md" tofile="${project.build.directory}/classes/META-INF/metaljs-bsd-license.md" />
 										-->
 										<!--
-										<move file="${project.build.directory}/classes/META-INF/resources/metal-${metalui.version}/build" todir="${project.build.directory}/classes/META-INF/resources/liferay-faces-metal-reslib" />
+										<move file="${project.build.directory}/classes/META-INF/resources/metal-${metaljs.version}/build" todir="${project.build.directory}/classes/META-INF/resources/liferay-faces-metal-reslib" />
 										-->
 										<move file="${project.build.directory}/classes/META-INF/resources/bootstrap-${bootstrap.version}-dist/css" todir="${project.build.directory}/classes/META-INF/resources/liferay-faces-metal-reslib" />
 										<move file="${project.build.directory}/classes/META-INF/resources/bootstrap-${bootstrap.version}-dist/fonts" todir="${project.build.directory}/classes/META-INF/resources/liferay-faces-metal-reslib" />
 										<delete dir="${project.build.directory}/classes/META-INF/resources/bootstrap-${bootstrap.version}-dist" />
 										<!--
-										<delete dir="${project.build.directory}/classes/META-INF/resources/metal-${metalui.version}" />
+										<delete dir="${project.build.directory}/classes/META-INF/resources/metal-${metaljs.version}" />
 										-->
 										<!-- glyphicons -->
 										<replace token="../fonts/glyphicons-halflings-regular.eot" value="#{resource['liferay-faces-metal-reslib:fonts/glyphicons-halflings-regular.eot']}" dir="${project.build.directory}/classes/META-INF/resources/liferay-faces-metal-reslib/css" includes="**/bootstrap*.css" />

@@ -83,8 +83,8 @@
 	<properties>
 		<bootstrap.version>3.3.6</bootstrap.version>
 		<bootstrap.zip.version>3.3.6</bootstrap.zip.version>
-		<metalui.version>3.0.1</metalui.version>
-		<metalui.zip.version>${metalui.version}</metalui.zip.version>
+		<metaljs.version>3.0.1</metaljs.version>
+		<metaljs.zip.version>${metaljs.version}</metaljs.zip.version>
 		<component.namespace>none</component.namespace>
 		<faces.group.id>com.sun.faces</faces.group.id>
 		<faces.api.artifact.id>jsf-api</faces.api.artifact.id>
