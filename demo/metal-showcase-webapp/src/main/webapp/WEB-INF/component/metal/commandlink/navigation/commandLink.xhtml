@@ -5,18 +5,18 @@
 	<ui:define name="col1">
 		<metal:form>
 			<showcase:example>
-				<metal:field label="#{i18n['ajax']}">
+				<metal:field id="field" label="#{i18n['ajax']}">
 					<f:facet name="label">
 						<metal:selectBooleanCheckbox value="#{commandModelBean.ajax}">
-							<f:ajax render="nav" />
+							<f:ajax render="field" />
 						</metal:selectBooleanCheckbox>
 					</f:facet>
+					<!-- Navigation based on outcome of navigation-case defined in navigation-rule.xml -->
+					<metal:commandLink action="toParam" ajax="#{commandModelBean.ajax}">
+						<metal:outputText value="#{i18n['to-param-page']} " />
+						<metal:icon name="arrow-right" />
+					</metal:commandLink>
 				</metal:field>
-				<!-- Navigation based on outcome of navigation-case defined in navigation-rule.xml -->
-				<metal:commandLink id="nav" action="toParam" ajax="#{commandModelBean.ajax}">
-					<metal:outputText value="#{i18n['to-param-page']} " />
-					<metal:icon name="arrow-right" />
-				</metal:commandLink>
 			</showcase:example>
 			<showcase:results label="#{i18n['parameter-value']}">
 				<metal:outputText id="parameterValue"
