@@ -81,6 +81,7 @@
 	</modules>
 
 	<properties>
+		<bnd.version>3.3.0</bnd.version>
 		<bootstrap.version>3.3.6</bootstrap.version>
 		<bootstrap.zip.version>3.3.6</bootstrap.zip.version>
 		<metaljs.version>3.0.1</metaljs.version>
@@ -154,12 +155,41 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.1</version>
+					<version>3.5.1</version>
 					<configuration>
 						<source>1.6</source>
 						<target>1.6</target>
 						<encoding>UTF-8</encoding>
 					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>biz.aQute.bnd</groupId>
+					<artifactId>bnd-maven-plugin</artifactId>
+					<version>${bnd.version}</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>bnd-process</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>biz.aQute.bnd</groupId>
+					<artifactId>bnd-baseline-maven-plugin</artifactId>
+					<version>${bnd.version}</version>
+					<configuration>
+						<includeDistributionManagement>false</includeDistributionManagement>
+						<fullReport>true</fullReport>
+					</configuration>
+					<executions>
+						<execution>
+							<id>baseline</id>
+							<goals>
+								<!-- goal>baseline</goal -->
+							</goals>
+						</execution>
+					</executions>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -169,9 +199,10 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jar-plugin</artifactId>
-					<version>2.4</version>
+					<version>3.0.2</version>
 					<configuration>
 						<archive>
+							<manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
 							<manifestEntries>
 								<Built-By>Release Manager</Built-By>
 								<Implementation-Title>${project.name}</Implementation-Title>
@@ -486,14 +517,14 @@
 				<artifactId>jstl-impl</artifactId>
 				<version>${jstl.version}</version>
 				<exclusions>
-				    <exclusion>
-				        <groupId>javax.servlet</groupId>
-				        <artifactId>servlet-api</artifactId>
-				    </exclusion>
-				    <exclusion>
-				        <groupId>javax.servlet.jsp</groupId>
-				        <artifactId>jsp-api</artifactId>
-				    </exclusion>
+					<exclusion>
+						<groupId>javax.servlet</groupId>
+						<artifactId>servlet-api</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>javax.servlet.jsp</groupId>
+						<artifactId>jsp-api</artifactId>
+					</exclusion>
 				</exclusions>
 			</dependency>
 			<dependency>
