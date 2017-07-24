@@ -81,6 +81,7 @@
 	</modules>
 
 	<properties>
+		<additionalparam>-Xdoclint:all -Xdoclint:-missing</additionalparam>
 		<bnd.version>3.3.0</bnd.version>
 		<bootstrap.version>3.3.6</bootstrap.version>
 		<bootstrap.zip.version>3.3.6</bootstrap.zip.version>
