@@ -18,7 +18,7 @@ import javax.faces.event.AbortProcessingException;
 import javax.faces.event.ComponentSystemEvent;
 import javax.faces.event.ComponentSystemEventListener;
 import javax.faces.event.ListenerFor;
-import javax.faces.event.PostAddToViewEvent;
+import javax.faces.event.PreRenderComponentEvent;
 import javax.faces.render.FacesRenderer;
 
 import com.liferay.faces.metal.component.commandbutton.CommandButton;
@@ -29,7 +29,7 @@ import com.liferay.faces.util.render.RendererUtil;
  * @author  Kyle Stiemann
  */
 @FacesRenderer(componentFamily = CommandButton.COMPONENT_FAMILY, rendererType = CommandButton.RENDERER_TYPE)
-@ListenerFor(systemEventClass = PostAddToViewEvent.class, sourceClass = CommandButton.class)
+@ListenerFor(systemEventClass = PreRenderComponentEvent.class, sourceClass = CommandButton.class)
 @ResourceDependency(library = "javax.faces", name = "jsf.js")
 public class CommandButtonRenderer extends CommandButtonRendererBase implements ComponentSystemEventListener {
 
