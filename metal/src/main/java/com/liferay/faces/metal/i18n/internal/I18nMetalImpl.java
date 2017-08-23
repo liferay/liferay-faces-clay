@@ -15,6 +15,11 @@ package com.liferay.faces.metal.i18n.internal;
 
 import java.io.Serializable;
 
+import javax.faces.context.ExternalContext;
+
+import com.liferay.faces.metal.config.internal.MetalWebConfigParam;
+import com.liferay.faces.util.cache.Cache;
+import com.liferay.faces.util.cache.CacheFactory;
 import com.liferay.faces.util.i18n.I18n;
 import com.liferay.faces.util.i18n.I18nBundleBase;
 
@@ -34,5 +39,25 @@ public class I18nMetalImpl extends I18nBundleBase implements Serializable {
 	@Override
 	public String getBundleKey() {
 		return "i18n-metal";
+	}
+
+	@Override
+	protected Cache<String, String> newConcurrentMessageCache(ExternalContext externalContext) {
+
+		Cache<String, String> concurrentMessageCache;
+		int initialCacheCapacity = MetalWebConfigParam.MetalI18nBundleInitialCacheCapacity.getIntegerValue(
+				externalContext);
+		MetalWebConfigParam MetalI18nBundleMaxCacheCapacity = MetalWebConfigParam.MetalI18nBundleMaxCacheCapacity;
+		int maxCacheCapacity = MetalI18nBundleMaxCacheCapacity.getIntegerValue(externalContext);
+
+		if (maxCacheCapacity != MetalI18nBundleMaxCacheCapacity.getDefaultIntegerValue()) {
+			concurrentMessageCache = CacheFactory.getConcurrentLRUCacheInstance(externalContext, initialCacheCapacity,
+					maxCacheCapacity);
+		}
+		else {
+			concurrentMessageCache = CacheFactory.getConcurrentCacheInstance(externalContext, initialCacheCapacity);
+		}
+
+		return concurrentMessageCache;
 	}
 }
