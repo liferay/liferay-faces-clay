@@ -47,10 +47,9 @@ public class I18nMetalImpl extends I18nBundleBase implements Serializable {
 		Cache<String, String> concurrentMessageCache;
 		int initialCacheCapacity = MetalWebConfigParam.MetalI18nBundleInitialCacheCapacity.getIntegerValue(
 				externalContext);
-		MetalWebConfigParam MetalI18nBundleMaxCacheCapacity = MetalWebConfigParam.MetalI18nBundleMaxCacheCapacity;
-		int maxCacheCapacity = MetalI18nBundleMaxCacheCapacity.getIntegerValue(externalContext);
+		int maxCacheCapacity = MetalWebConfigParam.MetalI18nBundleMaxCacheCapacity.getIntegerValue(externalContext);
 
-		if (maxCacheCapacity != MetalI18nBundleMaxCacheCapacity.getDefaultIntegerValue()) {
+		if (maxCacheCapacity > -1) {
 			concurrentMessageCache = CacheFactory.getConcurrentLRUCacheInstance(externalContext, initialCacheCapacity,
 					maxCacheCapacity);
 		}

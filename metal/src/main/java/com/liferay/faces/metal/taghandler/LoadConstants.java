@@ -109,11 +109,9 @@ public class LoadConstants extends TagHandler {
 					ExternalContext externalContext = facesContext.getExternalContext();
 					int initialCacheCapacity = MetalWebConfigParam.MetalLoadConstantsInitialCacheCapacity
 						.getIntegerValue(externalContext);
-					MetalWebConfigParam MetalLoadConstantsMaxCacheCapacity =
-						MetalWebConfigParam.MetalLoadConstantsMaxCacheCapacity;
-					int maxCacheCapacity = MetalLoadConstantsMaxCacheCapacity.getIntegerValue(externalContext);
+					int maxCacheCapacity = MetalWebConfigParam.MetalLoadConstantsMaxCacheCapacity.getIntegerValue(externalContext);
 
-					if (maxCacheCapacity != MetalLoadConstantsMaxCacheCapacity.getDefaultIntegerValue()) {
+					if (maxCacheCapacity > -1) {
 						constantCache = LoadConstants.constantCache = CacheFactory.getConcurrentLRUCacheInstance(
 									externalContext, initialCacheCapacity, maxCacheCapacity);
 					}
